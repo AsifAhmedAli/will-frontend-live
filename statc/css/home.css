@@ -1,0 +1,134 @@
+.logo{
+    width: 125px;
+}
+.home {
+    background-image: url("../img/home/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.menu_bar_btn {
+    font-size: 30px !important;
+    color: white;
+    outline: none !important;
+    background-color: transparent;
+    border: none;
+}
+.nav-link{
+    color: white !important;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -2%;
+    transition: 0.5s;
+}
+.nav-link:hover{
+    color: rgb(197, 197, 197) !important;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 2%;
+}
+.login_button{
+    background-color: #1653D1;
+    font-size: 16px !important;
+    border-radius: 7px;
+}
+.nav_cross{
+    display: none;
+}
+.home_main_heading{
+    font-size: 48px;
+    line-height: 58.09px;
+    font-weight: 600;
+    color:white;
+}
+.secons_heading{
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 21.24px;
+    color: white;
+}
+
+@media screen and (min-width: 1000px){
+    .container{
+        max-width: 1300px;
+    }
+}
+
+.home_img{
+    width: 90%;
+}
+.home_title_container{
+    padding: 40px 0px;
+}
+.home_header{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    color: #FFFFFF;
+}
+.home_btn{
+    padding: 18px 40px;
+    gap: 10px;
+    border-radius: 8px;
+    background: #1653D1;
+    text-decoration: none;
+    color: white;
+    transition: 0.5;
+    
+}
+.home_btn:hover{
+    color: rgb(201, 201, 201);
+    text-decoration: none;
+}
+.home_desc{
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 1245px){
+    .home_header{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1245px){
+    .home_header{
+        font-size: 35px;
+    }
+    .home_desc{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1072px){
+    .home_title_container{
+        padding-bottom:50px;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .home_img{
+        width: 60%;
+    }
+    .home_title_container{
+        padding-left: 10%;
+        padding-right:10%;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .home_header{
+        font-size: 30px;
+        line-height: 48.09px;
+    }
+    .home_desc{
+        font-size: 15px;
+    }
+}
+

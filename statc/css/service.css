@@ -1,0 +1,61 @@
+.service_card{
+    background: #FFFFFF;
+    border: 1px solid #ECEEFC;
+    border-radius: 8px;
+    padding: 30px ;
+    cursor: pointer;
+    transition: 0.5s;
+    height: 310px;
+    text-decoration: none;
+}
+.service_card:hover{
+    background: #1653D1;
+}
+.service_icon{
+    width: 60px;
+    height: 60px;
+    background: #DAE1FF;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service_card_title{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #02051C;
+}
+.service_card_desc{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #353749;
+}
+
+.service_card:hover .service_icon{
+    background-color: #FFFFFF;
+}
+.service_card:hover .service_card_title{
+    color: #FFFFFF;
+}
+.service_card:hover .service_card_desc{
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 500px){
+    .service_card{
+        height: 450;
+    }
+}
+.editor-container{
+    
+}
+
+.ql-blank{
+    
+}
+.menu_icon_container{
+    background-color: white !important
+}

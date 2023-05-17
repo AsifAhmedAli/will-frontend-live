@@ -1,0 +1,12 @@
+.brand_title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 145%;
+    color: #6C6973;
+}
+.brand_item_container{
+    padding: 35px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}

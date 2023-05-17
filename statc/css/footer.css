@@ -1,0 +1,32 @@
+footer{
+    background-color: #00016D;
+}
+.footer_devider{
+    background-color: #DEE3E6;
+    height: 3px;
+}
+
+.footer_item_heading{
+    font-size: 18px;
+    line-height: 160%;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.footer_item{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #FFFFFF;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.footer_item:hover{
+    color: #b7b7b7;
+}
+.footer_icon_link{
+    color:#ADBAC0;
+    font-size: 28px;
+}

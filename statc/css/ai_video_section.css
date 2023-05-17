@@ -1,0 +1,21 @@
+.ai_video_container{
+    position: relative;
+}
+video{
+    cursor: pointer;
+    width: 70%;
+    border-radius: 10px;
+
+}
+video:hover .click{
+    background: #DAE1FF;
+}
+.video_play_button_container{
+    position: absolute;
+    transform: translate(550px,170px);
+}
+@media screen and (max-width: 768px){
+    video{
+        width: 100%;
+    }
+}

@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<link rel="stylesheet" href="./statc/css/all.css">
+    <!-- google jaquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!--========== Font Awesome ==========-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!--========== Slider ==========-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+
+    <!-- style -->
+    <link href="./statc/css/style.css" rel="stylesheet">
+
+    <!-- nav -->
+    <link href="./statc/css/nav.css" rel="stylesheet">
+
+    <!-- home -->
+    <link href="./statc/css/home.css" rel="stylesheet">
+
+    <!-- brand -->
+    <link href="./statc/css/brand.css" rel="stylesheet">
+
+    <!-- service -->
+    <link href="./statc/css/service.css" rel="stylesheet">
+
+    <!-- about -->
+    <link href="./statc/css/about.css" rel="stylesheet">
+
+    <!-- ai video section -->
+    <link href="./statc/css/ai_video_section.css" rel="stylesheet">
+
+    <!-- interview -->
+    <link href="./statc/css/interview.css" rel="stylesheet">
+
+    <!-- bollean -->
+    <link href="./statc/css/bollean_search.css" rel="stylesheet">
+
+    <!-- testimonial -->
+    <link href="./statc/css/testimoniqal.css" rel="stylesheet">
+
+    <!-- faq-->
+    <link href="./statc/css/faq.css" rel="stylesheet">
+
+    <!-- service page -->
+    <link href="./statc/css/service_page.css" rel="stylesheet">
+
+    <!-- footer -->
+    <link href="./statc/css/footer.css" rel="stylesheet">
+
+    <!-- login -->
+    <link href="./statc/css/login.css" rel="stylesheet">
+
+    <!-- profile setting -->
+    <link href="./statc/css/profile_setting.css" rel="stylesheet">
+
+    <!-- create video -->
+    <link href="./statc/css/create_video.css" rel="stylesheet">
+
+    <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
+
+
+
+    <title>About</title>
+</head>
+
+<body>
+    <!-- home section ================================-->
+    <section class="home">
+        <div class="container">
+            <!--Navbar=================-->
+            <nav class="navbar navbar-expand-lg py-4">
+                <div class="container-fluid">
+
+                    <!-- logo -->
+                    <a class="navbar-brand" href="index.html">
+                        <img src="statc/img/logo.png" class="logo" alt="logo">
+                    </a>
+
+
+                    <button class="d-block d-md-block d-lg-none menu_bar_btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+
+                        <i class="fas fa-bars menu_bar"></i>
+                        <i class="far fa-times nav_cross"></i>
+
+                    </button>
+                    <div class="collapse navbar-collapse ps-0 ps-md-0 " id="navbarSupportedContent">
+
+                        <ul class="navbar-nav m-auto mb-2 mb-lg-0 ps-0 ps-md-0 ps-lg-5">
+                            <!-- <li class="nav-item mx-3 text-center">
+                                <a class="nav-link active popin_font" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item mx-3 text-center">
+                                <a class="nav-link active popin_font" aria-current="page" href="#solutions">Services</a>
+                            </li> -->
+
+                            <!-- <li class="nav-item mx-3 text-center dropdown_container">
+                                <a class="nav-link popin_font doropdown_button" href="#!">Services 
+                                    <span class="" style="font-size: 16px;"><i class="fas fa-chevron-down"></i></a></span>
+                                <div class="dropdown_content">
+                                    <a href="interview_question.html" class="popin_font py-2 px-3">Interview Question</a>
+                                    <a href="bollean_search.html" class="popin_font py-2 px-3">Boolean Search</a>
+                                    <a href="keyword_search.html" class="popin_font py-2 px-3">Keyword Search</a>
+                                    <a href="candidate_summary.html" class="popin_font py-2 px-3">Candidate Summary</a>
+                                    <a href="email_template.html" class="popin_font py-2 px-3">Email Templates</a>
+                                    <a href="job_description.html" class="popin_font py-2 px-3">Jobs Description Breakdown</a>
+                                    <a href="technical_question.html" class="popin_font py-2 px-3">Technical Question</a>
+                                </div>
+                            </li> -->
+
+                            <script>
+                                $(".doropdown_button").click(function () {
+                                    $(".dropdown_content").toggle("slow");
+                                })
+                            </script>
+
+
+
+
+                            <!-- <li class="nav-item mx-3 m-auto text-center">
+                                <a class="nav-link popin_font" href="create_video.html">Video</a>
+                            </li> -->
+                            <!-- <li class="nav-item mx-3 m-auto text-center">
+                                <a class="nav-link popin_font" href="#about">About</a>
+                            </li> -->
+                            <!-- <li class="nav-item mx-3 m-auto text-center">
+                                <a class="nav-link popin_font" href="#">Contact</a>
+                            </li> -->
+
+                        </ul>
+
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li id="loginlist" class="d-none nav-item text-center">
+                                <a class="nav-link active popin_font login_button px-4 py-3" aria-current="page"
+                                    href="login.html">LOGIN &nbsp;<img src="statc/img/user.png" alt="user icon"> </a>
+                            </li>
+                            <li id="logoutlist" class="d-none nav-item text-center">
+                                <button onclick="logoutcall()" class="nav-link active popin_font login_button px-4 py-3" style="border-color: #1653D1;">Logout &nbsp;<img src="statc/img/user.png" alt="user icon"> </button>
+                            </li>
+
+                        </ul>
+
+
+
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </section>
+
+
+
+
+    <!-- ai work video section ================================-->
+    <section class="ai_work pb-5" id="about">
+        <div class="container">
+            <div class="title_desc_container pt-5">
+                <h1 class="section_title text-center manrope_font">How the Pure Talent AI Work</h1>
+                <div class="section_desc_container justify-content-center d-flex">
+                    <p class="section_desc text-center inter_font py-2">
+                        
+                        At Pure Talent AI, we understand the challenges that recruiting professionals face when it comes to finding the right match. The process can be time-consuming, expensive, and frustrating, especially when it's hard to find the right candidates with the right skills and experience. That's why we developed our state-of-the-art AI-powered recruitment software to help you overcome these challenges and succeed in today's competitive market.
+                        <br><br>
+                        Our software leverages the power of artificial intelligence to simplify the recruitment process, enabling you to focus on what really matters - finding the right people for your opening. Whether you need help with job descriptions, resume screening, or technical interviews, Pure Talent AI has the tools and expertise you need to succeed.                    
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- video section -->
+            <div class="ai_video_container">
+
+                <div class="video_play_button_container d-none d-md-none d-lg-block">
+                    <button class="click btn"><img src="statc/video/ai_video_section/video-circle.png"
+                            alt="video play icon"> </button>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <video id="myVideo" class="video">
+                        <source src="statc/video/ai_video_section/demo-video.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- contact form -->
+    <section class="contact" style="overflow: hidden;">
+
+        <div class="container p-3">
+
+            <div class="contact_second_section">
+
+                <div class="row inter_font">
+                    <div class="col-md-5 py-5" >
+                        <h1 class="get_in_touch_header text-center" style="color: #230475;">Get in Touch</h1>
+                        <p class="text-center">info@puretalent.ai</p>
+                        <div class="d-flex justify-content-center">
+                            <a href=""  class="d-block mx-2 contact_page_icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href=""  class="d-block mx-2 contact_page_icon"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    
+                    <form class="col-md-7 px-5 py-5 inter_font">
+    
+                        <div class="px-md-5">
+                            <div class="d-flex">
+                                <div class="mb-3 col-6 pe-2">
+                                    <label for="exampleFormControlInput1" class="form-label contact_form_label_color">First Name</label>
+                                    <input type="email" class="form-control contact_form_input" id="exampleFormControlInput1" >
+                                </div>
+                                <div class="mb-3 col-6 ps-2">
+                                    <label for="exampleFormControlInput1" class="form-label contact_form_label_color">Last Name</label>
+                                    <input type="email" class="form-control contact_form_input" id="exampleFormControlInput1" >
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label contact_form_label_color">Email<sup>*</sup></label>
+                                <input type="email" class="form-control contact_form_input" id="exampleFormControlInput1" >
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label contact_form_label_color ">Message</label>
+                                <textarea class="form-control contact_form_input" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+        
+                            <div class="mb-3">
+                                <button class="btn col-12 contact_submit_btn" >Send</button>
+                            </div>
+                            <p class="thanks_for_submitting inter_font">Thanks for submitting</p>
+                        </div>
+                        
+                    </form>
+                </div>
+
+            </div>
+
+            
+            
+        </div>
+        
+        
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer mt-5 py-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-md-6 col-lg-4 py-4">
+                    <img src="statc/img/logo.png" class="logo py-4 py-md-4 py-lg-0" alt="company logo">
+
+                    <div class="footer_item_container py-2">
+                        <a class="footer_item inter_font py-2">Connect with us on social media</a>
+                        <div class="footer_icon_container">
+                            <a href="#!" class="footer_icon_link pe-2"><i class="fab fa-facebook"></i></a>
+                            <a href="#!" class="footer_icon_link px-2"><i class="fab fa-twitter"></i></a>
+                            <a href="#!" class="footer_icon_link px-2"><i class="fab fa-instagram"></i></a>
+                            <a href="#!" class="footer_icon_link ps-2"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 py-2 py-4 py-md-4 py-lg-0">
+                    <h4 class="footer_item_heading inter_font">Services</h4>
+                    <div class="footer_item_container py-3">
+                        <a class="footer_item inter_font py-2">Ask Technical Industry Questions</a>
+                        <a class="footer_item inter_font py-2">Candidate Summary Generator</a>
+                        <a class="footer_item inter_font py-2">Technical Interview Questions Generator</a>
+                        <a class="footer_item inter_font py-2">Boolean String Generator</a>
+                        <a class="footer_item inter_font py-2">Job Description Generator</a>
+                        <a class="footer_item inter_font py-2">Email templates</a>
+                        <a class="footer_item inter_font py-2">Job Description Analysis Tool</a>
+                        <a class="footer_item inter_font py-2">AI Resume screening & Reverse Searching</a>
+                        <a class="footer_item inter_font py-2">AI Avatar Video Generator</a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-2 py-4 py-md-4 py-lg-0">
+                    <h4 class="footer_item_heading inter_font">our COMPANY</h4>
+
+                    <div class="footer_item_container py-3">
+                        <a class="footer_item inter_font py-2">About Us</a>
+                        <a class="footer_item inter_font py-2">Pricing</a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-2 py-4 py-md-4 py-lg-0">
+                    <h4 class="footer_item_heading inter_font">Support</h4>
+
+                    <div class="footer_item_container py-3">
+                        <a class="footer_item inter_font py-2">FAQ</p>
+                            <a class="footer_item inter_font py-2">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer devider -->
+        <div class="footer_devider"></div>
+        <div class="container d-block d-md-block d-lg-flex pt-5">
+            <div class="me-auto footer_item inter_font text-center text-md-center text-lg-0">Copyright © 2023 Pure
+                Pure Talent AI. All rights reserved.</div>
+            <div class="ms-auto text-center text-md-center text-lg-0"><a href="#!"
+                    class="footer_item inter_font d-inline">Privacy Policy</a> <b style="color: white;">|</b> <a
+                    class="footer_item inter_font d-inline">Terms of Use</a></div>
+        </div>
+
+    </footer>
+
+</body>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<!-- slider cdn -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+<!-- nav js -->
+<script src="./statc/js/nav.js"></script>
+
+<!-- nav js -->
+<script src="./statc/js/testimonial_slider.js"></script>
+
+<!-- ai video section js -->
+<script src="./statc/js/ai_video_section.js"></script>
+
+<!-- service js -->
+<script src="./statc/js/service.js"></script>
+
+<!-- login -->
+<script src="./statc/js/login.js"></script><script src="./statc/js/all.js"></script><script src="./statc/js/calls.js"></script>
+<script src="./statc/js/check.js"></script>
+
+<div class="loading" id="loader1" style="visibility: hidden;">Loading&#8230;</div>
+
+</html>

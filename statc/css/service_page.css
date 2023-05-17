@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+
+.service_page {
+    background: #F8F8F8;
+}
+
+.service_left_heading {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.1px;
+
+    color: #171725;
+}
+
+.serivice_left_title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1px;
+    color: #92929D;
+}
+
+.form-select {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1px;
+    padding: 11px;
+    color: #44444F;
+    background-color: white;
+
+    background: #FFFFFF;
+    border: 1px solid #F1F1F5;
+    border-radius: 6px;
+}
+
+.service_job_title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.1px;
+
+    color: #171725;
+}
+
+.job_title_input {
+    align-items: flex-start;
+    padding: 11px;
+    gap: 10px;
+
+    width: 280px;
+    height: 39px;
+
+    background: #FFFFFF;
+    border: 1px solid #F1F1F5;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.job_description_header {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.1px;
+
+}
+
+.job_desc_input {
+    align-items: flex-start;
+    padding: 11px;
+    gap: 10px;
+
+    width: 280px;
+    height: 160px;
+
+    background: #FFFFFF;
+    border: 1px solid #F1F1F5;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.service_btn {
+    justify-content: center;
+    align-items: center;
+    padding: 15px 40px;
+    gap: 10px;
+    color: #696974;
+    text-decoration: none;
+    background: #EFEFF0;
+    border-radius: 8px;
+    transition: 0.5s;  
+}
+.service_btn:hover{
+    background: #1653D1;
+    color: white;
+}
+
+
+.service_btn_active {
+    justify-content: center;
+    align-items: center;
+    padding: 15px 40px;
+    gap: 10px;
+
+    color:white;
+    text-decoration: none;
+
+    background: #1653D1;
+    border-radius: 8px;
+    transition: 0.5s;  
+}
+.service_btn_active:hover{
+    color:white;
+}
+
+.service_main_container{
+    background: #FFFFFF;
+    border: 1px solid #F1F1F5;
+    border-radius: 20px;
+    height: 574px;
+    overflow: hidden;
+}
+.main_container_text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1px;
+    color: #92929D;
+}
+
+@media screen and (max-width: 1200px){
+    .service_btn_active {
+        padding: 12px 30px; 
+    }
+    .service_btn {
+        padding: 12px 30px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .service_btn_active {
+        padding: 10px 25px; 
+    }
+    .service_btn {
+        padding: 10px 25px;
+    }
+}
+
+.interview_question_item_header{
+    background: #F5F5F5;
+}
+
+.interview_question_like_icon{
+    width: 22.21px;
+}
+.interview_question_menu_icon{
+    width:20px
+}
+.interview_question_table_header{
+    background: #F5F5F5;
+    border: none;
+}
+.interview_question_table_item_heading{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.1px;
+    color: #171725;
+}
+
+.interview_question_table th {
+    border-bottom-width: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.1px;
+    color: #171725;
+    font-family: 'Inter', sans-serif;
+    padding: 10px 10px 10px 20px;
+}
+
+.interview_question_table td {
+    padding: 15px 10px 15px 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1px;
+    color: #565656;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+@media screen and (min-width: 600px){
+    
+}
+.interview_question_form_select{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1px;
+    color: #44444F;
+    width: 100%;
+    padding: 11px;
+    cursor: pointer;
+    border: 1px solid #F1F1F5;
+    border-radius: 6px;
+
+}
+
+.interview_question_select{
+
+}
+
+
+
+
+.interview_question_select {
+    position: relative;
+  }
+  
+  .interview_question_select select {
+    display: none;
+  }
+  
+  .select-selected {
+    background-color: white;
+    border-radius: 6px 6px 0px 0px;
+  }
+  
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #D5D5DC transparent transparent transparent;
+   
+  }
+  
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #D5D5DC transparent;
+    top: 7px;
+  }
+  
+
+  .select-items {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 0px 0px 6px 6px;
+  }
+  .select-items div,.select-selected {
+    color: #696974;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .select-items {
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background: rgba(22, 83, 209, 0.1);
+  }
+
+.service_input_desc_header_container{
+    border-color: #F1F1F5 !important;
+    border-width: 1px !important;
+    border-radius: 20px 20px 0px 0px;
+    border: solid;
+    
+}
+.service_input_desc_header{
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #171725;
+}
+.service_input_desc_header_menu_icon{
+    width: 18px;
+}
+
+.menu_icon_container{
+    position: relative;
+
+}
+.drop_down_conatiner{
+    margin-left: -160px;
+    
+    background-color: white;
+    box-shadow: 0px 5px 15px rgba(68, 68, 79, 0.1);
+    padding: 20px 0px;
+    display: none;
+    position: absolute;
+}
+/* .menu_icon_container:hover .drop_down_conatiner{
+    display: block;
+} */
+.service_drop_down_item{
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0px 19px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1px;
+    color: #696974;
+}
+
+.dropdown_item_icon{
+    width: 14px;
+    height: 14px;
+}
+.service_drop_down_item:hover{
+    background: rgba(22, 83, 209, 0.1);
+    
+}
+
+
+.candidate_upload_choose{
+    display: none;
+}
+.choose_file{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
+    text-align: center;
+    color: #0062FF;
+    border: 1px solid #0062FF;
+    border-radius: 10px;
+    padding: 2px 18px;
+    transition: 0.4s;
+}
+
+.choose_file:hover{
+    color: #696974;
+    border: 1px solid #125ace;
+}
+.no_file_choosen{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    color: #92929D;
+    padding-top: 4px;
+}
+
+.file_choosen_label_container{
+    cursor: pointer;
+}
+
+.dropdown-toggle{
+    background-color: white !important;
+    outline: none;
+    border: none;
+}
+.dropdown-menu{
+    border: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+

@@ -1,0 +1,243 @@
+.login_page{
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.auth_right_side{
+    /* background-image: url("../img/login/login.png");
+    background-repeat: no-repeat;
+	background-size: cover; */
+    background-color: #E5EEFF;
+    height: 100vh;
+    position: relative;
+    
+}
+.auth_right_side{
+    margin: 0;
+    padding: 0;
+}
+.auth_user_container{
+    position: absolute; /* Position the div absolutely within the container */
+      bottom: 0;
+}
+.auth_curv{
+    width: 100vh;
+}
+.auth_logo_container{
+    margin-top: 33vh;
+    margin-left: 30vh;
+}
+.auth_logo{
+    width: 30vh;
+}
+
+.auth_form{
+    background: #FFFFFF;
+}
+.login_left_side{
+    padding: 30px 30px 00px 40px;
+}
+
+.login_heading{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    color: #02051C;
+}
+.login_desc{
+    font-weight: 400;
+    font-size: 16px;
+    
+    color: #676977;
+}
+.auth_input_label{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 160%;
+    color: #34303D;
+}
+.auth_input{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 145%;
+    color: #909CA1;
+}
+.remember_me_label{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    text-align: center;
+    color: #34303D;
+}
+.forgot_password{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    text-align: center;
+    color: #6125DF;
+}
+.auth_btn{
+    padding: 8px 30px;
+    background: #1653D1;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 28px;
+    transition: 0.4s;
+}
+
+.auth_btn:hover{
+    color: #c6c6c6;
+}
+.check_container{
+    cursor: pointer;
+}
+.login_with_or{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #9A9BA4;
+}
+.horizontal_line{
+}
+.social_media_auth_icon{
+    width: 30x;
+    height: 30px;
+}
+.social_media_auth_icon_container{
+    width: 118px;
+    height: 58px;
+    border: 1px solid #E6E6E8;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+
+}
+.social_media_auth_icon_container:hover{
+    border: 2px solid #1653D1;
+}
+.create_account_label{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #02051C;
+}
+.registration_link{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    color: #3C50E0;
+    text-decoration: none;
+    transition: 0.4s;
+}
+.registration_link:hover{
+    color: #1d2987;
+}
+.auth_form_container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 0px 60px rgba(0, 45, 137, 0.05);
+}
+
+@media screen and (max-width: 450px){
+    .social_media_auth_icon_container{
+        width: 100px;
+        height: 58px;
+    
+    }
+}
+
+.auth_prev_btn_container{
+    position: relative;
+}
+.auth_prev_btn{
+    position: absolute;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+
+    /* 2nd color */
+
+    color: #1653D1;
+}
+
+.prev_icon{
+    height: 30px;
+    width: 30px;
+}
+.auth_prev_btn{
+    padding: 20px 20px;
+}
+
+@media screen and (max-width: 991px){
+    .auth_form_container{
+        padding-top: 70px;
+    }
+}
+.auth_prev_btn a{
+    text-decoration: none;
+}
+.forgot_password a{
+    text-decoration: none;
+}
+
+
+.modal-dialog {
+    margin: auto;
+  }
+
+  .modal-dialog {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 3.5rem);
+  }
+
+  .modal-footer{
+    border:none;
+  }
+  .change_password_modal_heading{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    color: #02051C;
+  }
+
+  .modal-dialog{
+    height: 80%;
+    width: 80%;
+  }
+
+  .change_password_modal_btn{
+    background: #1653D1;
+    border-radius: 8px;
+    padding: 12px 27px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    color: #FFFFFF;
+    transition: 0.5s;
+  }
+  .change_password_modal_btn:hover{
+    color: #dcdcdc;
+  }
+  .password_changed_tick{
+    width:80px;
+    height:80px;
+  }
+
+  .password_change_desc{
+    font-weight: 500;
+    font-size: 16px;
+    color: #353749;
+
+  }

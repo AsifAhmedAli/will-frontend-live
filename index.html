@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<link rel="stylesheet" href="./statc/css/all.css">
+    <!-- google jaquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!--========== Font Awesome ==========-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!--========== Slider ==========-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+
+    <!-- style -->
+    <link href="./statc/css/style.css" rel="stylesheet">
+
+    <!-- nav -->
+    <link href="./statc/css/nav.css" rel="stylesheet">
+
+    <!-- home -->
+    <link href="./statc/css/home.css" rel="stylesheet">
+
+    <!-- brand -->
+    <link href="./statc/css/brand.css" rel="stylesheet">
+
+    <!-- service -->
+    <link href="./statc/css/service.css" rel="stylesheet">
+
+    <!-- about -->
+    <link href="./statc/css/about.css" rel="stylesheet">
+
+    <!-- ai video section -->
+    <link href="./statc/css/ai_video_section.css" rel="stylesheet">
+
+    <!-- interview -->
+    <link href="./statc/css/interview.css" rel="stylesheet">
+
+    <!-- bollean -->
+    <link href="./statc/css/bollean_search.css" rel="stylesheet">
+
+    <!-- testimonial -->
+    <link href="./statc/css/testimoniqal.css" rel="stylesheet">
+
+    <!-- faq-->
+    <link href="./statc/css/faq.css" rel="stylesheet">
+
+    <!-- service page -->
+    <link href="./statc/css/service_page.css" rel="stylesheet">
+
+    <!-- footer -->
+    <link href="./statc/css/footer.css" rel="stylesheet">
+
+    <!-- login -->
+    <link href="./statc/css/login.css" rel="stylesheet">
+
+   <!-- profile setting -->
+   <link href="./statc/css/profile_setting.css" rel="stylesheet">
+
+   <!-- create video -->
+   <link href="./statc/css/create_video.css" rel="stylesheet">
+
+   <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
+
+    
+
+    <title>Pure Talent AI</title>
+</head>
+
+<body>
+    <!-- home section ================================-->
+    <section class="home">
+        <div class="container">
+            <!--Navbar=================-->
+            <nav class="navbar navbar-expand-lg py-4">
+                <div class="container-fluid">
+
+                    <!-- logo -->
+                    <a class="navbar-brand" href="#">
+                        <img src="statc/img/logo.png" class="logo" alt="logo">
+                    </a>
+
+
+                    <button class="d-block d-md-block d-lg-none menu_bar_btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+
+                        <i class="fas fa-bars menu_bar"></i>
+                        <i class="far fa-times nav_cross"></i>
+
+                    </button>
+                    <div class="collapse navbar-collapse ps-0 ps-md-0 " id="navbarSupportedContent">
+
+                        <ul class="navbar-nav m-auto mb-2 mb-lg-0 ps-0 ps-md-0 ps-lg-5">
+                            <li class="nav-item mx-3 text-center">
+                                <a class="nav-link active popin_font" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item mx-3 text-center">
+                                <a class="nav-link active popin_font" aria-current="page" href="#solutions">Solutions</a>
+                            </li>
+
+                            <!-- <li class="nav-item mx-3 text-center dropdown_container">
+                                <a class="nav-link popin_font doropdown_button" href="#!">Services 
+                                    <span class="" style="font-size: 16px;"><i class="fas fa-chevron-down"></i></a></span>
+                                <div class="dropdown_content">
+                                    <a href="interview_question.html" class="popin_font py-2 px-3">Interview Question</a>
+                                    <a href="bollean_search.html" class="popin_font py-2 px-3">Boolean Search</a>
+                                    <a href="keyword_search.html" class="popin_font py-2 px-3">Keyword Search</a>
+                                    <a href="candidate_summary.html" class="popin_font py-2 px-3">Candidate Summary</a>
+                                    <a href="email_template.html" class="popin_font py-2 px-3">Email Templates</a>
+                                    <a href="job_description.html" class="popin_font py-2 px-3">Jobs Description Breakdown</a>
+                                    <a href="technical_question.html" class="popin_font py-2 px-3">Technical Question</a>
+                                </div>
+                            </li> -->
+
+                            <script>
+                                $(".doropdown_button").click(function(){
+                                    $(".dropdown_content").toggle("slow");
+                                })
+                            </script>
+
+
+                       
+
+                            <li class="nav-item mx-3 m-auto text-center">
+                                <a class="nav-link popin_font" href="#!">Pricing</a>
+                            </li>
+                            <li class="nav-item mx-3 m-auto text-center">
+                                <a class="nav-link popin_font" href="about_page.html">About</a>
+                            </li>
+                            <li class="nav-item mx-3 m-auto text-center">
+                                <a class="nav-link popin_font" href="#">Contact</a>
+                            </li>
+
+                        </ul>
+
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li id="loginlist" class="d-none nav-item text-center">
+                                <a class="nav-link active popin_font login_button px-4 py-3" aria-current="page"
+                                    href="login.html">LOGIN &nbsp;<img src="statc/img/user.png" alt="user icon"> </a>
+                            </li>
+                            <li id="logoutlist" class="d-none nav-item text-center">
+                                <button onclick="logoutcall()" class="nav-link active popin_font login_button px-4 py-3" style="border-color: #1653D1;">Logout &nbsp;<img src="statc/img/user.png" alt="user icon"> </button>
+                            </li>
+
+                        </ul>
+
+
+
+                    </div>
+
+                </div>
+            </nav>
+
+            <!-- home section -->
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-7 d-flex d-md-flex d-lg-block justify-content-center">
+                    <div class="home_title_container text-center text-md-center text-lg-start">
+                        <h1 class="home_header inter_font">Streamline Your Recruitment Workflows with Our User-Friendly Platform</h1>
+                        <p class="home_desc inter_font py-3">
+                            Maximize your Recruiting impact with our customizable platform and personalize support, designed to help you succeed in your role.
+                        </p>
+                        <a href="./registration.html" class="home_btn py-3">Get Started <i class="fal fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-5 justify-content-center ">
+                    <div class="home_img_container d-flex">
+                        <img class="d-block m-auto m-md-auto ms-lg-auto home_img" src="statc/img/home/home-img.png">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- brands section ================================-->
+    <section class="border">
+        <div class="container">
+            <div class="justify-content-center brand_item_container">
+                <div class="brand_title manrope_font mx-3 my-2">Our customers hire for:</div>
+                <div class="mx-4 my-2"><a href="#!"><img src="statc/img/brands/google.png" alt="google icon"></a> </div>
+                <div class="mx-4 my-2"><a href="#!"><img src="statc/img/brands/meta.png" alt="meta icon"></a></div>
+                <div class="mx-4 my-2"><a href="#!"><img src="statc/img/brands/microsoft.png" alt="microsoft icon"></a>
+                </div>
+                <div class="mx-4 my-2"><a href="#!"><img src="statc/img/brands/amazon.png" alt="amazon icon"></a></div>
+                <div class="mx-4 my-2"><a href="#!"><img src="statc/img/brands/airbnb.png" alt="airbnb icon"></a></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- service section ================================-->
+    <section class="service" id="solutions">
+        <div class="container">
+
+            <div class="title_desc_container pt-5">
+                <h1 class="section_title text-center manrope_font">What we do</h1>
+                <div class="section_desc_container justify-content-center d-flex">
+                    <p class="section_desc text-center inter_font py-2">
+                        We are revolutionizing recruitment, one AI match at a time. Empower Your HR team with the tools,
+                        resources, and support they need to drive business success and create a more efficient and
+                        effective workplace.
+                    </p>
+                </div>
+            </div>
+
+            <!-- services-->
+            <div class="row p-0 p-md-0 p-lg-5">
+
+                <div class="col-12 col-md-6 col-lg-4 my-2">
+                    <a class="service_card d-block" href="candidate_summary.html">
+                        <div class="service_card_icon_container d-flex pb-3">
+                            <div class="service_icon">
+                                <img src="statc/img/service-icon/pathtool.png" class="d-block" alt="service icon">
+                            </div>
+                        </div>
+                        <h4 class="service_card_title inter_font pb-3">Resume Editor tool</h4>
+                        <p class="service_card_desc inter_font">
+                            a cutting-edge feature designed to help external recruiters enhance and refine candidate
+                            resumes before presenting them to clients
+                        </p>
+                    </a>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 my-2">
+                    <a class="service_card d-block" href="technical_question.html">
+                        <div class="service_card_icon_container d-flex pb-3">
+                            <div class="service_icon">
+                                <img src="statc/img/service-icon/pen-tool-2.png" class="d-block" alt="service icon">
+                            </div>
+                        </div>
+                        <h4 class="service_card_title inter_font pb-3">Ask Technical Industry Questions</h4>
+                        <p class="service_card_desc inter_font">
+                            Streamline your hiring process by asking our AI technical questions about your specific
+                            niche
+                        </p>
+                    </a>
+
+                </div>
+
+
+
+                <div class="col-12 col-md-6 col-lg-4 my-2">
+                    <a class="service_card d-block" href="candidate_summary.html">
+                        <div class="service_card_icon_container d-flex pb-3">
+                            <div class="service_icon">
+                                <img src="statc/img/service-icon/message-programming.png" class="d-block"
+                                    alt="service icon">
+                            </div>
+                        </div>
+                        <h4 class="service_card_title inter_font pb-3">Candidate Summary Generator </h4>
+                        <p class="service_card_desc inter_font">
+                            A cutting-edge tool designed to help external recruiters enhance and refine candidate
+                            resumes before presenting them to clients.
+                        </p>
+                    </a>
+
+                </div>
+
+                <!-- texhnical question -->
+                <div class="col-12 col-md-6 col-lg-4 my-2">
+                    <a class="service_card service_card d-block" href="technical_question.html">
+                        <div class="service_card_icon_container d-flex pb-3">
+                            <div class="service_icon">
+                                <img src="statc/img/service-icon/Marketer.png" class="d-block" alt="service icon">
+                            </div>
+                        </div>
+                        <h4 class="service_card_title inter_font pb-3">Technical Interview Questions Generator</h4>
+                        <p class="service_card_desc inter_font">
+                            Develop technical questions to for candidate screenings or interview preparation
+                        </p>
+                    </a>
+
+                </div>
+
+                <!-- bollean-->
+                <div class="col-12 col-md-6 col-lg-4 my-2">
+                    <a class="service_card service_card d-block" href="bollean_search.html">
+                        <div class="service_card_icon_container d-flex pb-3">
+                            <div class="service_icon">
+                                <img src="statc/img/service-icon/messagesearch.png" class="d-block" alt="service icon">
+                            </div>
+                        </div>
+                        <h4 class="service_card_title inter_font pb-3">Boolean String Generator</h4>
+                        <p class="service_card_desc inter_font">
+                            Develop strategic Boolean search strings targeted to your targeted search 
+                        </p>
+                    </a>
+
+                </div>
+
+                <!-- job description -->
+                <div class="col-12 col-md-6 col-lg-4 my-2">
+                    <a class="service_card service_card d-block" href="job_description.html">
+                        <div class="service_card_icon_container d-flex pb-3">
+                            <div class="service_icon">
+                                <img src="statc/img/service-icon/Group.png" class="d-block" alt="service icon">
+                            </div>
+                        </div>
+                        <h4 class="service_card_title inter_font pb-3">Job Description Generator</h4>
+                        <p class="service_card_desc inter_font">
+                            Create a job description for a specific job posting in seconds 
+                        </p>
+                    </a>
+
+                </div>
+
+                <!-- email templates -->
+                <div class="col-12 col-md-6 col-lg-4 my-2">
+                    <a class="service_card service_card d-block" href="email_template.html">
+                        <div class="service_card_icon_container d-flex pb-3">
+                            <div class="service_icon">
+                                <img src="statc/img/service-icon/people.png" class="d-block" alt="service icon">
+                            </div>
+                        </div>
+                        <h4 class="service_card_title inter_font pb-3">Email templates</h4>
+                        <p class="service_card_desc inter_font">
+                            Generate email templates for sales, holidays, responses, and any candidate outreach in seconds
+                        </p>
+                    </a>
+
+                </div>
+
+                <!-- Job Description Analysis Tool -->
+                <div class="col-12 col-md-6 col-lg-4 my-2">
+                    <a class="service_card service_card d-block" href="breack_down.html">
+                        <div class="service_card_icon_container d-flex pb-3">
+                            <div class="service_icon">
+                                <img src="statc/img/service-icon/briefcase.png" class="d-block" alt="service icon">
+                            </div>
+                        </div>
+                        <h4 class="service_card_title inter_font pb-3">Job Description Analysis Tool</h4>
+                        <p class="service_card_desc inter_font">
+                            Break down job specifications using Natural Language Processing to understand the requirement of the job descriptions
+                        </p>
+                    </a>
+
+                </div>
+
+                <!-- AI Resume screening & Reverse Searching -->
+                <div class="col-12 col-md-6 col-lg-4 my-2">
+                    <a class="service_card service_card d-block" href="candidate_summary.html">
+                        <div class="service_card_icon_container d-flex pb-3">
+                            <div class="service_icon">
+                                <img src="statc/img/service-icon/Group.png" class="d-block" alt="service icon">
+                            </div>
+                        </div>
+                        <h4 class="service_card_title inter_font pb-3">AI Resume screening & Reverse Searching</h4>
+                        <p class="service_card_desc inter_font">
+                            Upload your job description and upload your applications, and our AI will screen for the best matches
+                        </p>
+                    </a>
+
+                </div>
+
+                <!-- ai avatar video generator -->
+                <div class="col-12 col-md-6 col-lg-4 my-2">
+                    <a class="service_card service_card d-block" href="create_video.html">
+                        <div class="service_card_icon_container d-flex pb-3">
+                            <div class="service_icon">
+                                <img src="statc/img/service-icon/Group.png" class="d-block" alt="service icon">
+                            </div>
+                        </div>
+                        <h4 class="service_card_title inter_font pb-3">AI Avatar Video Generator</h4>
+                        <p class="service_card_desc inter_font">
+                            Designed to revolutionize the way you create and share videos for presentations, sales, and marketing
+                        </p>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- why choose us section ================================-->
+    <section class="about py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-5 about_left_containet d-lg-block d-md-flex d-flex justify-content-center">
+                    <img src="statc/img/about/about-group-img.png" alt="about iamge" class="about_image d-block">
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-7 about_right_containet ">
+                    <h5 class="manrope_font about_heading py-2 mt-5 mt-md-5 mt-lg-0">Why choose us?</h5>
+                    <p class="about_desc inter_font py-2">
+                        HR potential with our comprehensive platform, featuring cutting-edge tools and resources to enhance your performance
+                    </p>
+
+                    <div class="py-3">
+
+                        <!--100% Quality-->
+                        <div class="about_item_container my-2">
+                            <div class="anout_item d-flex">
+                                <div class="about_item_icon_container">
+                                    <img src="statc/img/about/like.png" class="d-block about_icon" alt="about icon">
+                                </div>
+                                <div class="about_item_desc_container mt-2 mt-md-0 mt-lg-0 px-2 px-md-3 px-lg-3">
+                                    <h4 class="about_item_heading manrope_font">Improve Efficiency </h4>
+                                    <p class="about_item_desc">
+                                        <label class="about_item_label inter_font">
+                                            AI can quickly and accurately analyze job requirements and candidate resumes, effort
+                                        </label>
+                                        <label class="about_item_label inter_font">required for manual review, summaries, and evaluation.</label>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Interview guarantee to Cost Savings-->
+                        <div class="about_item_container my-2">
+                            <div class="anout_item">
+                                <div class="about_item_icon_container">
+                                    <img src="statc/img/about/like.png" class="d-block about_icon" alt="about icon">
+                                </div>
+                                <div class="about_item_desc_container mt-2 mt-md-0 mt-lg-0 px-1 px-md-3 px-lg-3">
+                                    <h4 class="about_item_heading manrope_font">Cost Savings</h4>
+                                    <p class="about_item_desc">
+                                        <label class="about_item_label inter_font">
+                                            AI can reduce the cost of recruitment by streamlining the process, reducing the
+                                        </label>
+                                        <label class="about_item_label inter_font">need for manual searching, and minimizing the risk of hiring mistakes.</label>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- We have 15k+ users -->
+                        <div class="about_item_container my-2">
+                            <div class="anout_item">
+                                <div class="about_item_icon_container">
+                                    <img src="statc/img/about/like.png" class="d-block about_icon" alt="about icon">
+                                </div>
+                                <div class="about_item_desc_container mt-2 mt-md-0 mt-lg-0 px-2 px-md-3 px-lg-3">
+                                    <h4 class="about_item_heading manrope_font">We have 15k+ users</h4>
+                                    <p class="about_item_desc">
+                                        <label class="about_item_label inter_font">
+                                            Proven AI helping thousands of internal and external recruiters
+                                        </label>
+                                        <!-- <label class="about_item_label inter_font">AI can quickly and accurately analyse job requirements</label> -->
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+                   <div class="mt-5">
+                        <a href="./registration.html" class="about_btn inter_font mt-3">Get Started</a>
+                   </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ai work video section ================================-->
+    <section class="ai_work pb-5" id="about">
+        <div class="container">
+            <!-- <div class="title_desc_container pt-5">
+                <h1 class="section_title text-center manrope_font">How the Pure Talent AI Work</h1>
+                <div class="section_desc_container justify-content-center d-flex">
+                    <p class="section_desc text-center inter_font py-2">
+                        No more job posts, vetting candidates or dealing with the constant hiring challenges, Instead, we take care of it all and guarantee a perfect talent match in 7 -10 days.
+                    </p>
+                </div>
+            </div> -->
+
+            <!-- video section -->
+            <!-- <div class="ai_video_container">
+                
+                <div class="video_play_button_container d-none d-md-none d-lg-block">
+                    <button class="click btn"><img src="statc/video/ai_video_section/video-circle.png" alt="video play icon"> </button>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <video id="myVideo" class="video">
+                        <source src="statc/video/ai_video_section/demo-video.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Recruiting tools section ================================-->
+    <section class="interview py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6 interview_question_left_container">
+                    <div>
+                        <h5 class="interview_question_title manrope_font py-2">Recruiting tools</h5>
+                        <p class="interview_desc inter_font py-2">
+                            Our advanced algorithms generate Candidate summaries, Technical Interview Questions, Job descriptions, email templates, and assist and editing resumes. 
+                        </p>
+                        <a href="./registration.html" class="btn inter_view_question_btn inter_font my-2 d-inline">Get Started <i
+                                class="fal fa-arrow-right"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-6 interview_question_right_container">
+                    <img src="statc/img/interviewQuestion.png" class="interview_question" alt="interview question">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Match Making section ================================-->
+    <section class="bollean_search">
+        <div class="container">
+
+            <div class="row">
+                <div class="bollean_search_left_container col-12 col-md-12 col-lg-6">
+                    <img src="statc/img/bollean-search.png" class="bollean_search_img" alt="interview question">
+
+                </div>
+
+                <div class=" bollean_search_right_container col-12 col-md-12 col-lg-6 ps-3 ps-md-0 ps-lg-5">
+                    <div class="">
+                        <h5 class="bollean_search_title manrope_font">Resume Match Making</h5>
+                        <p class="bollean_search_desc inter_font">
+                            Our AI technology analyzes the resumes key skills, and experience to match the job description, allowing recruiters to quickly asses candidate suitability
+                        </p>
+                        <a href="./registration.html" class="bollean_btn btn">Get Started <i class="fal fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Avatar Video Creation section ================================-->
+    <section class="interview py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6 interview_question_left_container">
+                    <div>
+                        <h5 class="interview_question_title manrope_font py-2">Avatar Video Creation</h5>
+                        <p class="interview_desc inter_font py-2">
+                            Our AI-powered Avatar video generator creates personalized video for sales, presentations, and marketing your brand
+                        </p>
+                        <a href="./registration.html" class="btn inter_view_question_btn inter_font my-2 d-inline">Get Started <i
+                                class="fal fa-arrow-right"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-6 interview_question_right_container">
+                    <img src="statc/img/key-aearch.png" class="interview_question" alt="interview question">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- see more ================================-->
+    <section class="see_more py-5 d-flex justify-content-center">
+        <a href="./registration.html" class="see_more_btn inter_font">See More Services</a>
+    </section>
+
+    <!-- testimonial ================================-->
+    <section class="testimonial">
+        <div class="container">
+            <div class="faq_section_container pt-5">
+                <h1 class="faq_section_title text-center inter_font">What Our Customers Say</h1>
+            </div>
+
+
+            <!-- slider -->
+            <div class="slider_container px-5 py-3">
+                <div class="swiper mySwiper">
+
+
+                    <div class="swiper-wrapper">
+
+
+                        <!-- slider 1-->
+                        <div class="swiper-slide">
+
+                            <div class="testimonial_slider_desc py-5">
+                                <p class="testimonial_desc inter_font">
+                                    <img src="statc/img/testimonial/quote-up.png" class="d-inline qout_up"style="width:24px;height:24px;" alt="quote up">
+                                    We were looking for a platform that was essentially a CRM for influencer management
+                                    that also allowed us to aggregate our campaign analytics and access the insights we
+                                    need to properly evaluate influencers.
+                                <div class="text-center">
+                                    <img src="statc/img/testimonial/quote-down.png"
+                                        class="d-none d-md-none d-lg-inline qout_down" style="width:24px;height:24px;"
+                                        alt="quote down">
+                                </div>
+                                </p>
+                                <div class="author_container d-flex justify-content-center">
+                                    <img class="testimonial_author_img d-block" style="width:55px; height: 55px;"
+                                        alt="testimonial_author" src="statc/img/testimonial/testimonial_author1.png">
+                                </div>
+                                <h4 class="testimonial_author_name text-center inter_font pt-3">Josh Noraan</h4>
+                                <p class="testimonial_author_title inter_font">Project Manager</p>
+                            </div>
+
+                        </div>
+
+
+                       <!-- slider 2-->
+                       <div class="swiper-slide">
+
+                        <div class="testimonial_slider_desc py-5">
+                            <p class="testimonial_desc inter_font">
+                                <img src="statc/img/testimonial/quote-up.png" class="d-inline qout_up"
+                                    style="width:24px;height:24px;" alt="quote up">
+                                We were looking for a platform that was essentially a CRM for influencer management
+                                that also allowed us to aggregate our campaign analytics and access the insights we
+                                need to properly evaluate influencers.
+                            <div class="text-center">
+                                <img src="statc/img/testimonial/quote-down.png"
+                                    class="d-none d-md-none d-lg-inline qout_down" style="width:24px;height:24px;"
+                                    alt="quote down">
+                            </div>
+                            </p>
+                            <div class="author_container d-flex justify-content-center">
+                                <img class="testimonial_author_img d-block" style="width:55px; height: 55px;"
+                                    alt="testimonial_author" src="statc/img/testimonial/testimonial_author1.png">
+                            </div>
+                            <h4 class="testimonial_author_name text-center inter_font pt-3">Josh Noraan</h4>
+                            <p class="testimonial_author_title inter_font">Project Manager</p>
+                        </div>
+
+                    </div>
+                    </div>
+
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- faq section ================================-->
+    <section class="faq">
+        <div class="container">
+            <div class="faq_section_container pt-5">
+                <h1 class="faq_section_title text-center inter_font">Frequently Asked Questions</h1>
+            </div>
+
+
+            <div class="py-4">
+                <div class="container faq_container my-2  py-2">
+                    <div class="accordion faq_border" id="faqAccordion">
+                        <div class="accordion-item py-2">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="text-start btn d-block oke collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                                    aria-controls="collapseOne">
+                                    <div class="d-flex">
+                                        <div class="me-auto inter_font faq_question_text">Is there a free trial
+                                            available?</div>
+                                        <div class="ms-auto"><img src="statc/img/plus.png" alt="plus icon"></div>
+                                    </div>
+
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body inter_font">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container faq_container my-2  py-2">
+                    <div class="accordion faq_border" id="faqAccordion">
+                        <div class="accordion-item py-2">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="text-start btn d-block oke collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="false"
+                                    aria-controls="collapseOne">
+                                    <div class="d-flex">
+                                        <div class="me-auto inter_font faq_question_text">Can I change my plan later?
+                                        </div>
+                                        <div class="ms-auto"><img src="statc/img/plus.png" alt="plus icon"></div>
+                                    </div>
+
+                                </button>
+                            </h3>
+                            <div id="collapseOne1" class="accordion-collapse collapse" aria-labelledby="headingOne1"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body inter_font">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container faq_container my-2 py-2">
+                    <div class="accordion faq_border" id="faqAccordion">
+                        <div class="accordion-item py-2">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="text-start btn d-block oke collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="false"
+                                    aria-controls="collapseOne2">
+                                    <div class="d-flex">
+                                        <div class="me-auto inter_font faq_question_text">What is your cancellation
+                                            policy?</div>
+                                        <div class="ms-auto"><img src="statc/img/plus.png" alt="plus icon"></div>
+                                    </div>
+
+                                </button>
+                            </h3>
+                            <div id="collapseOne2" class="accordion-collapse collapse" aria-labelledby="headingOne2"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body inter_font">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container faq_container my-2 py-2">
+                    <div class="accordion faq_border" id="faqAccordion">
+                        <div class="accordion-item py-2">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="text-start btn d-block oke collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne3" aria-expanded="false"
+                                    aria-controls="collapseOne">
+                                    <div class="d-flex">
+                                        <div class="me-auto inter_font faq_question_text">Can other info be added to an
+                                            invoice?</div>
+                                        <div class="ms-auto"><img src="statc/img/plus.png" alt="plus icon"></div>
+                                    </div>
+
+                                </button>
+                            </h3>
+                            <div id="collapseOne3" class="accordion-collapse collapse" aria-labelledby="headingOne2"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body inter_font">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container faq_container my-2 py-2">
+                    <div class="accordion faq_border" id="faqAccordion">
+                        <div class="accordion-item py-2">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="text-start btn d-block oke collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="false"
+                                    aria-controls="collapseOne">
+                                    <div class="d-flex">
+                                        <div class="me-auto inter_font faq_question_text">How does billing work?</div>
+                                        <div class="ms-auto"><img src="statc/img/plus.png" alt="plus icon"></div>
+                                    </div>
+
+                                </button>
+                            </h3>
+                            <div id="collapseOne5" class="accordion-collapse collapse" aria-labelledby="headingOne2"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body inter_font">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container faq_container my-2 py-2">
+                    <div class="accordion faq_border" id="faqAccordion">
+                        <div class="accordion-item py-2">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="text-start btn d-block oke collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne6" aria-expanded="false"
+                                    aria-controls="collapseOne">
+                                    <div class="d-flex">
+                                        <div class="me-auto inter_font faq_question_text">How do I change my account
+                                            email?</div>
+                                        <div class="ms-auto"><img src="statc/img/plus.png" alt="plus icon"></div>
+                                    </div>
+
+                                </button>
+                            </h3>
+                            <div id="collapseOne6" class="accordion-collapse collapse" aria-labelledby="headingOne6"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body inter_font">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+    </section>
+
+    <footer class="footer mt-5 py-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-md-6 col-lg-4 py-4">
+                    <img src="statc/img/logo.png" class="logo py-4 py-md-4 py-lg-0" alt="company logo">
+
+                    <div class="footer_item_container py-2">
+                        <a class="footer_item inter_font py-2">Connect with us on social media</a>
+                        <div class="footer_icon_container">
+                            <a href="#!" class="footer_icon_link pe-2"><i class="fab fa-facebook"></i></a>
+                            <a href="#!" class="footer_icon_link px-2"><i class="fab fa-twitter"></i></a>
+                            <a href="#!" class="footer_icon_link px-2"><i class="fab fa-instagram"></i></a>
+                            <a href="#!" class="footer_icon_link ps-2"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 py-2 py-4 py-md-4 py-lg-0">
+                    <h4 class="footer_item_heading inter_font">Services</h4>
+                    <div class="footer_item_container py-3">
+                        <a href="./registration.html" class="footer_item inter_font py-2">Ask Technical Industry Questions</a>
+                        <a href="./registration.html" class="footer_item inter_font py-2">Candidate Summary Generator</a>
+                        <a href="./registration.html" class="footer_item inter_font py-2">Technical Interview Questions Generator</a>
+                        <a href="./registration.html" class="footer_item inter_font py-2">Boolean String Generator</a>
+                        <a href="./registration.html" class="footer_item inter_font py-2">Job Description Generator</a>
+                        <a href="./registration.html" class="footer_item inter_font py-2">Email templates</a>
+                        <a href="./registration.html" class="footer_item inter_font py-2">Job Description Analysis Tool</a>
+                        <a href="./registration.html" class="footer_item inter_font py-2">AI Resume screening & Reverse Searching</a>
+                        <a href="./registration.html" class="footer_item inter_font py-2">AI Avatar Video Generator</a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-2 py-4 py-md-4 py-lg-0">
+                    <h4 class="footer_item_heading inter_font">our COMPANY</h4>
+
+                    <div class="footer_item_container py-3">
+                        <a class="footer_item inter_font py-2">About Us</a>
+                        <a class="footer_item inter_font py-2">Pricing</a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-2 py-4 py-md-4 py-lg-0">
+                    <h4 class="footer_item_heading inter_font">Support</h4>
+
+                    <div class="footer_item_container py-3">
+                        <a class="footer_item inter_font py-2">FAQ</p>
+                            <a class="footer_item inter_font py-2">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer devider -->
+        <div class="footer_devider"></div>
+        <div class="container d-block d-md-block d-lg-flex pt-5">
+            <div class="me-auto footer_item inter_font text-center text-md-center text-lg-0">Copyright © 2023 Pure
+                Pure Talent AI. All rights reserved.</div>
+            <div class="ms-auto text-center text-md-center text-lg-0"><a href="#!"
+                    class="footer_item inter_font d-inline">Privacy Policy</a> <b style="color: white;">|</b> <a
+                    class="footer_item inter_font d-inline">Terms of Use</a></div>
+        </div>
+
+    </footer>
+
+</body>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<!-- slider cdn -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+<!-- nav js -->
+<script src="./statc/js/nav.js"></script>
+
+<!-- nav js -->
+<script src="./statc/js/testimonial_slider.js"></script>
+
+<!-- ai video section js -->
+<script src="./statc/js/ai_video_section.js"></script>
+
+<!-- service js -->
+<script src="./statc/js/service.js"></script>
+
+<!-- login -->
+<script src="./statc/js/login.js"></script><script src="./statc/js/all.js"></script><script src="./statc/js/calls.js"></script>
+<script src="./statc/js/check.js"></script>
+
+<div class="loading" id="loader1" style="visibility: hidden;">Loading&#8230;</div>
+
+</html>

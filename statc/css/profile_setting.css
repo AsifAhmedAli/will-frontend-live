@@ -1,0 +1,114 @@
+.prfile_setting_heading{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    color: #34303D;
+}
+.profile_setting_icon{
+    width: 24px;
+    height: 24px;
+}
+.prfile_setting_heading_active{
+    border-width:0px 0px 0px 3px;
+    border-style: solid;
+    border-color: black;
+    transition: 0.5s;
+}
+.prfile_setting_heading:hover{
+    border-width:0px 0px 0px 3px;
+    border-style: solid;
+    border-color: black;
+}
+.prfile_setting_heading a{
+    text-decoration: none;
+    color: #34303D;
+}
+.profle_info_form_heading{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    color: #34303D;
+}
+.profile_input_label{
+    font-weight: 500;
+    font-size: 14px;
+    color: #171725;
+}
+.profile_setting_input{
+    background: #FFFFFF;
+    border: 1px solid #F1F1F5;
+    border-radius: 6px;
+    padding: 11px;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+    letter-spacing: 0.1px;
+
+    color: #909CA1;
+    outline-color: rgb(88, 174, 174);
+}
+.profile_setting_select{
+    background: #FFFFFF;
+    border: 1px solid #F1F1F5;
+    border-radius: 6px;
+}
+.change_password_mail_container a{
+    color: #1653D1;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 6px 12px;
+    border-radius: 7px;
+    border-color:#1653D1;
+    text-decoration: none;
+    border-style: solid;
+    border-width:1px;
+    transition: 0.5s;
+    flex-wrap: wrap;
+}
+.change_password_mail_container a:hover{
+    background-color: #1653D1;
+    color: white;
+}
+.profile_setting_next_btn{
+    background: #1653D1;
+    border-radius: 8px;
+    padding: 13px 30px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: white;
+    border: none;
+    transition: 0.4s;
+}
+.profile_setting_next_btn:hover{
+    color: rgb(216, 216, 216);
+}
+.update_cancel_btn{
+    background: #E2E2E2;
+    border-radius: 8px;
+    padding: 11px;
+    gap: 10px;
+    color: white;
+    transition: 0.5s;
+    color: black;
+
+}
+
+.update_cancel_btn:hover{
+    background: #1653D1;
+    color: rgb(209, 209, 209);
+}
+.update_cancel_btn_active{
+    background: #1653D1;
+    color: white;
+}
+.change_info_form_header{
+    color: #34303D;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+}

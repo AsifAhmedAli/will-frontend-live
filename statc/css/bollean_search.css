@@ -1,0 +1,56 @@
+.bollean_search{
+    background: #F7F4FD;
+    overflow: hidden;
+}
+.bollean_search_right_container{
+    height: 448px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bollean_search_img_container{
+    width: 100%;
+}
+.bollean_search_img{
+    width: 100%;
+    height: 448px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bollean_search_title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 130%;
+    color: #34303D;
+}
+
+
+.bollean{
+    display: flex;
+    height: 448px;
+    flex-wrap: wrap;
+}
+.bollean_search_desc{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #6C6973;
+}
+.bollean_btn{
+    padding: 18px 40px;
+    background: #1653D1;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    transition: 0.5s;
+}
+.bollean_btn:hover{
+    color: rgb(211, 211, 211);
+}
+.bollean_search_left_container{
+    position: relative;
+    padding-top: 40px !important;
+}
+

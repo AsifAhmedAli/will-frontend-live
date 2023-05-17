@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<link rel="stylesheet" href="./statc/css/all.css">
+    <!-- google jaquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!--========== Font Awesome ==========-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!--========== ckeditor ===========-->
+    <!-- <script src="https://cdn.ckeditor.com/4.16.2/standard-all/ckeditor.js"></script>  -->
+    <!-- <script src="statc/js/editor_conf/ckeditor.js"></script> -->
+
+    <!--========== Slider ==========-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- style -->
+    <link href="./statc/css/style.css" rel="stylesheet">
+
+    <!-- nav -->
+    <link href="./statc/css/nav.css" rel="stylesheet">
+
+    <!-- home -->
+    <link href="./statc/css/home.css" rel="stylesheet">
+
+    <!-- brand -->
+    <link href="./statc/css/brand.css" rel="stylesheet">
+
+    <!-- service -->
+    <link href="./statc/css/service.css" rel="stylesheet">
+
+    <!-- about -->
+    <link href="./statc/css/about.css" rel="stylesheet">
+
+    <!-- ai video section -->
+    <link href="./statc/css/ai_video_section.css" rel="stylesheet">
+
+    <!-- interview -->
+    <link href="./statc/css/interview.css" rel="stylesheet">
+
+    <!-- bollean -->
+    <link href="./statc/css/bollean_search.css" rel="stylesheet">
+
+    <!-- testimonial -->
+    <link href="./statc/css/testimoniqal.css" rel="stylesheet">
+
+    <!-- faq-->
+    <link href="./statc/css/faq.css" rel="stylesheet">
+
+    <!-- service page -->
+    <link href="./statc/css/service_page.css" rel="stylesheet">
+
+    <!-- footer -->
+    <link href="./statc/css/footer.css" rel="stylesheet">
+
+    <!-- login -->
+    <link href="./statc/css/login.css" rel="stylesheet">
+
+    <!-- profile setting -->
+    <link href="./statc/css/profile_setting.css" rel="stylesheet">
+
+
+    <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
+
+    <!-- create video -->
+    <link href="./statc/css/create_video.css" rel="stylesheet">
+
+    <title>Job Spec Breakdown</title>
+</head>
+
+<body>
+ 
+    <!--Navbar=================-->
+    <nav class="navbar navbar-expand-md py-4 second_nav px-2"> 
+        
+        <div class="container">
+
+            <!-- logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="statc/img/logo.png" class="logo" alt="logo">
+            </a>
+
+
+
+            <button class="d-block d-md-none d-lg-none menu_bar_btn" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+
+                <i class="fas fa-bars menu_bar"></i>
+                <i class="far fa-times nav_cross"></i>
+
+            </button>
+
+            <div class="collapse navbar-collapse ps-0 ps-md-0 " id="navbarSupportedContent">
+
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item text-center">
+                        <a class="nav-link active popin_font py-3 mt-1 mx-md-3 mx-lg-3" aria-current="page" href="profile_settings.html">
+                            <img src="statc/img/setting.png" class="nav_setting_icon" alt="user icon">
+                        </a>
+                    </li>
+
+                    <li class="nav-item text-center">
+                        <a class="nav-link active popin_font py-3" aria-current="page" href="#">
+                            <img src="statc/img/Rectangle.png" class="nav_user_img" alt="user icon">&nbsp; <img src="statc/img/short-down.png" class="nav_short_down_img" alt="short down">
+                        </a>
+                    </li>
+
+                    
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- interview section -->
+    <section class="px-2 service_page py-5">
+        <div class="container">
+            <div class="row">
+                <div action="#!" class="col-lg-3 col-md-4 col-12">
+                    <div>
+                        <h5 class="service_left_heading inter_font my-3">Choose Your Services</h5>
+                        <p class="serivice_left_title inter_font my-3">This services help your productivity</p>
+    
+                        <!-- slect option -->
+                        <div class="my-4 interview_question_select">
+                            <select class="inter_font" aria-label="Default select example">
+                                <option class="inter_font">Select</option>
+                                <option class="inter_font" value="1">Interview Question</option>
+                                <option class="inter_font" value="2">Boolean Search</option>
+                                <option class="inter_font" value="3">Candidate Summaries</option>
+                                <option class="inter_font" value="3">Jobs Description</option>
+                                <option class="inter_font" value="3">Email Template</option>
+                                <option class="inter_font" value="3">Keyword Search</option>
+                                <option class="inter_font" selected value="3">Jobs Spec Breakdown</option>
+                                <option class="inter_font" value="3">Technical Question</option>
+                            </select>
+                        </div>
+                        
+    
+                        <h5 class="service_job_title inter_font my-3">Job Role</h5>
+                        <input class="job_title_input form-control inter_font my-3" placeholder="Product Designer" type="text">
+    
+                        <div class="service_button_container d-block d-md-flex d-lg-flex mx-2 mt-5">
+                            <a href="#!" class="service_btn d-inline d-md-block d-lg-block inter_font">Clear</a>
+                            <a href="#!" class=" service_btn_active d-inline d-md-block d-lg-block ms-auto inter_font">Create</a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+    
+                <div class="col-lg-9 col-md-8 col-12 ps-2 ps-md-4 ps-lg-4 py-5 py-md-0 py-lg-0">
+                    <form class="service_main_container">
+
+
+                        <!-- dropdown icon -->
+                        <div class="d-flex service_input_desc_header_container px-4 py-3">
+                            <h5 class="service_input_desc_header inter_font">
+                                <a href="#!" class=""><img src="statc/img/arrow-small-right 1.png" class="service_input_desc_header_icon" alt="arrow icon"></a>
+                                &nbsp; Product Designer
+                            </h5>
+
+                            
+                            <div class="ms-auto menu_icon_container">
+
+                                <div class="dropdown">
+                                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="statc/img/menu-dots-vertical.png" class="service_input_desc_header_menu_icon">
+                                    </button>
+                                    <ul class="dropdown-menu drop_down_conatiner" aria-labelledby="dropdownMenuButton1">
+
+                                        <div class="service_drop_down_item inter_font py-2 d-flex dropdown-item">
+                                            <div class="pe-1">
+                                                <img src="statc/img/download_icon.png" class="dropdown_item_icon" alt="donload icon">
+                                            </div>
+                                            <div class="ms-1">Download (.docx)</div>
+                                        </div>
+
+                                        <div class="service_drop_down_item inter_font py-2 d-flex dropdown-item">
+                                            <div class="pe-1">
+                                                <img src="statc/img/clear_all_icon.png" class="dropdown_item_icon" alt="donload icon">
+                                            </div>
+                                            <div class="ms-1">Clear all content</div>
+                                        </div>
+
+                                        <div class="service_drop_down_item inter_font py-2 d-flex dropdown-item">
+                                            <div class="pe-1">
+                                                <img src="statc/img/trash_icon.png" class="dropdown_item_icon" alt="donload icon">
+                                            </div>
+                                            
+                                            <div class="ms-1 pt-1">Delete document</div>
+                                        </div>
+                                    </ul>
+                                  </div>
+                                <!-- <div class="drop_down_conatiner text-center">
+
+                                    <div class="service_drop_down_item inter_font py-2 d-flex">
+                                        <div class="pe-1">
+                                            <img src="statc/img/download_icon.png" class="dropdown_item_icon" alt="donload icon">
+                                        </div>
+                                        <div class="ms-1">Download (.docx)</div>
+                                    </div>
+
+                                    <div class="service_drop_down_item inter_font py-2 d-flex">
+                                        <div class="pe-1">
+                                            <img src="statc/img/clear_all_icon.png" class="dropdown_item_icon" alt="donload icon">
+                                        </div>
+                                        <div class="ms-1">Clear all content</div>
+                                    </div>
+
+                                    <div class="service_drop_down_item inter_font py-2 d-flex">
+                                        <div class="pe-1">
+                                            <img src="statc/img/trash_icon.png" class="dropdown_item_icon" alt="donload icon">
+                                        </div>
+                                        
+                                        <div class="ms-1 pt-1">Delete document</div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+
+
+                        <!-- <textarea id="editor" class="oke"></textarea>  -->
+                        <div class="text_editor_container">
+                            <div class="custom_item new d-none d-md-block d-lg-block">
+                                <label class="inter_font word-count">Words 0</label>&nbsp;&nbsp;
+                                <label class="inter_font char-count">Charecter 0</label>
+                            </div>
+                            <div id="editor-container"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+  
+
+    <!-- footer section ================================-->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-md-6 col-lg-4 py-4">
+                    <img src="statc/img/logo.png" class="logo py-4 py-md-4 py-lg-0" alt="company logo">
+
+                    <div class="footer_item_container py-2">
+                        <a class="footer_item inter_font py-2">Connect with us on social media</a>
+                        <div class="footer_icon_container">
+                            <a href="#!" class="footer_icon_link pe-2"><i class="fab fa-facebook"></i></a>
+                            <a href="#!" class="footer_icon_link px-2"><i class="fab fa-twitter"></i></a>
+                            <a href="#!" class="footer_icon_link px-2"><i class="fab fa-instagram"></i></a>
+                            <a href="#!" class="footer_icon_link ps-2"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 py-2 py-4 py-md-4 py-lg-0">
+                    <h4 class="footer_item_heading inter_font">Services</h4>
+                    <div class="footer_item_container py-3">
+                        <a class="footer_item inter_font py-2">Ask Technical Industry Questions</a>
+                        <a class="footer_item inter_font py-2">Candidate Summary Generator</a>
+                        <a class="footer_item inter_font py-2">Technical Interview Questions Generator</a>
+                        <a class="footer_item inter_font py-2">Boolean String Generator</a>
+                        <a class="footer_item inter_font py-2">Job Description Generator</a>
+                        <a class="footer_item inter_font py-2">Email templates</a>
+                        <a class="footer_item inter_font py-2">Job Description Analysis Tool</a>
+                        <a class="footer_item inter_font py-2">AI Resume screening & Reverse Searching</a>
+                        <a class="footer_item inter_font py-2">AI Avatar Video Generator</a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-2 py-4 py-md-4 py-lg-0">
+                    <h4 class="footer_item_heading inter_font">our COMPANY</h4>
+
+                    <div class="footer_item_container py-3">
+                        <a class="footer_item inter_font py-2">About Us</a>
+                        <a class="footer_item inter_font py-2">Pricing</a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-2 py-4 py-md-4 py-lg-0">
+                    <h4 class="footer_item_heading inter_font">Support</h4>
+
+                    <div class="footer_item_container py-3">
+                        <a class="footer_item inter_font py-2">FAQ</p>
+                            <a class="footer_item inter_font py-2">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer devider -->
+        <div class="footer_devider"></div>
+        <div class="container d-block d-md-block d-lg-flex pt-5">
+            <div class="me-auto footer_item inter_font text-center text-md-center text-lg-0">Copyright © 2023 Pure
+                Pure Talent AI. All rights reserved.</div>
+            <div class="ms-auto text-center text-md-center text-lg-0"><a href="#!"
+                    class="footer_item inter_font d-inline">Privacy Policy</a> <b style="color: white;">|</b> <a
+                    class="footer_item inter_font d-inline">Terms of Use</a></div>
+        </div>
+
+    </footer>
+
+</body>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<!-- slider cdn -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+<!-- nav js -->
+<script src="./statc/js/nav.js"></script>
+
+<!-- nav js -->
+<script src="./statc/js/testimonial_slider.js"></script>
+
+<!-- ai video section js -->
+<script src="./statc/js/ai_video_section.js"></script>
+
+<!-- service js -->
+<script src="./statc/js/service.js"></script>
+
+<!-- login -->
+<script src="./statc/js/login.js"></script><script src="./statc/js/all.js"></script><script src="./statc/js/calls.js"></script>
+<script src="./statc/js/check.js"></script>
+
+<div class="loading" id="loader1" style="visibility: hidden;">Loading&#8230;</div>
+
+</html>

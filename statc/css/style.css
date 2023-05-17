@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.popin_font{
+    font-family: 'Poppins', sans-serif;
+}
+.inter_font{
+    font-family: 'Inter', sans-serif;
+}
+.gotham_font{
+
+}
+.manrope_font{
+    font-family: 'Manrope', sans-serif;
+}
+.roboto{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    max-width: 1300px;
+}
+.section_title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 130%;
+    color: #34303D;
+}
+.section_desc{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #6C6973;
+    width: 925px;
+}
+
+.see_more{
+    background: #00016D;
+}
+.see_more_btn{
+    color: white;
+    padding: 17px 32px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    border: 1px solid white;
+    text-decoration: none;
+    transition: 0.5s;
+    border-radius: 8px;
+}
+.see_more_btn:hover{
+    color: rgb(216, 216, 216);
+}
+
+.file_choosen_label_container{
+    display: block;
+}
+
+.ql-blank{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+.ql-toolbar.ql-snow{
+    border-width: 1px 0px 1px 0px !important;
+    border-color: #F1F1F5 !important;
+    padding-left: -100px;
+}
+.ql-container.ql-snow {
+    border-width: 0px 0px 0px 0px !important;
+    border-color: #F1F1F5 !important;
+    
+}
+.text_editor_container{
+    height:100%;
+    position: relative;
+    margin-top: 37px;
+    border: none !important;
+}
+.ql-toolbar .ql-snow {
+    color: red !important;
+    padding: 100px;
+}
+.ql-toolbar{
+    padding-left: 20px !important;
+}
+.custom_item{
+    position: absolute;
+    text-align: center;
+    margin-left: 75%;
+    margin-top:1.5%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1px;
+    color: #92929D;
+}
+
+
+/*---- contact form ----*/
+.contact_submit_btn{
+    border-radius: none !important;
+    background-color: #00016D;
+    color: white;
+    transition: 0.5s;
+}
+.contact_submit_btn:hover{
+    border-radius: none !important;
+    background-color: #0d10b0;
+    color: rgb(202, 202, 202);
+}
+.contact_form_label_color{
+    color: #00016D;
+}
+.contact_form_input{
+    background-color: transparent !important;
+    color: #00016D;
+    
+}
+.contact_second_section{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.thanks_for_submitting{
+    color: #00016D;
+}
+.contact_page_icon{
+    color: #00016D;
+}
+
+
+
+
