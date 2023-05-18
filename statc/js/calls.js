@@ -243,3 +243,49 @@ function settoken() {
   document.cookie = `token=${product}`;
   location.replace("./index.html");
 }
+//get-in-touch
+
+$("#getintouch").submit(function (event) {
+  // Prevent default form submission
+  event.preventDefault();
+  var fname = document.getElementById("exampleFormControlInput1").value;
+  var lname = document.getElementById("exampleFormControlInput11").value;
+  var email = document.getElementById("exampleFormControlInput12").value;
+  var msg = document.getElementById("exampleFormControlTextarea13").value;
+
+  document.getElementById("loader1").style.visibility = "visible";
+  $.ajax({
+    type: "POST",
+    url: `${baseurl}/get-in-touch`,
+    data: {
+      first_name: fname,
+      last_name: lname,
+      email: email,
+      message: msg,
+    },
+    success: function (response) {
+      // console.log(response.token);
+      document.getElementById("loader1").style.visibility = "hidden";
+      Swal.fire({
+        icon: "success",
+        title: "Successful!",
+        text: "We will Get back to you!",
+        // allowOutsideClick: false,
+      });
+      $("button.swal2-confirm").click(function () {
+        // alert("asdf");
+        window.location.reload();
+      });
+    },
+
+    error: function (response) {
+      document.getElementById("loader1").style.visibility = "hidden";
+      // console.log(response);
+      Swal.fire({
+        title: "Error!",
+        text: "An Unexpected Error Occured",
+        icon: "error",
+      });
+    },
+  });
+});
