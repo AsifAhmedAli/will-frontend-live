@@ -269,7 +269,50 @@ $("#getintouch").submit(function (event) {
       Swal.fire({
         icon: "success",
         title: "Successful!",
-        text: "We will Get back to you!",
+        text: "We will get back to you!",
+        // allowOutsideClick: false,
+      });
+      $("button.swal2-confirm").click(function () {
+        // alert("asdf");
+        window.location.reload();
+      });
+    },
+
+    error: function (response) {
+      document.getElementById("loader1").style.visibility = "hidden";
+      // console.log(response);
+      Swal.fire({
+        title: "Error!",
+        text: "An Unexpected Error Occured",
+        icon: "error",
+      });
+    },
+  });
+});
+
+$("#changepassform").submit(function (event) {
+  // Prevent default form submission
+  event.preventDefault();
+  var newpass = document.getElementById("newpass").value;
+  var confirmpass = document.getElementById("confirmpass").value;
+  var currentpass = document.getElementById("currentpass").value;
+
+  document.getElementById("loader1").style.visibility = "visible";
+  $.ajax({
+    type: "POST",
+    url: `${baseurl}/change-password`,
+    data: {
+      current_password: currentpass,
+      confirm_new_password: confirmpass,
+      new_password: newpass,
+    },
+    success: function (response) {
+      // console.log(response.token);
+      document.getElementById("loader1").style.visibility = "hidden";
+      Swal.fire({
+        icon: "success",
+        title: "Successful!",
+        text: "Password Changed Successfully!",
         // allowOutsideClick: false,
       });
       $("button.swal2-confirm").click(function () {
