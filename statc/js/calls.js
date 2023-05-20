@@ -324,11 +324,24 @@ $("#changepassform").submit(function (event) {
     error: function (response) {
       document.getElementById("loader1").style.visibility = "hidden";
       // console.log(response);
-      Swal.fire({
-        title: "Error!",
-        text: "An Unexpected Error Occured",
-        icon: "error",
-      });
+      if (response.message == "Unauthorized") {
+        Swal.fire({
+          icon: "error",
+          title: "Failed!",
+          text: "Please Login!",
+          // allowOutsideClick: false,
+        });
+        $("button.swal2-confirm").click(function () {
+          // alert("asdf");
+          window.location.replace("./login.html");
+        });
+      } else {
+        Swal.fire({
+          title: "Error!",
+          text: "An Unexpected Error Occured",
+          icon: "error",
+        });
+      }
     },
   });
 });
