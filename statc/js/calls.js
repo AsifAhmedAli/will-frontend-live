@@ -1,3 +1,17 @@
+function getCookie(cname) {
+  let name = cname + "=";
+  let ca = document.cookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
 var request;
 //     // Abort any pending request
 if (request) {
@@ -168,9 +182,10 @@ $("#loginform").submit(function (event) {
       password: pass,
     },
     success: function (response) {
-      // console.log(response.token);
+      // console.log(response.user);
       document.cookie = `token=${response.token}`;
       document.cookie = `user=${response.user}`;
+      document.cookie = `id=${response.user.id}`;
       document.getElementById("loader1").style.visibility = "hidden";
       Swal.fire({
         icon: "success",
@@ -186,12 +201,20 @@ $("#loginform").submit(function (event) {
 
     error: function (response) {
       document.getElementById("loader1").style.visibility = "hidden";
-      console.log(response);
-      Swal.fire({
-        title: "Error!",
-        text: "An Unexpected Error Occured",
-        icon: "error",
-      });
+      // console.log(response);
+      if (response.responseJSON.error == "Invalid email or password") {
+        Swal.fire({
+          title: "Error!",
+          text: "Incorrect Password",
+          icon: "error",
+        });
+      } else {
+        Swal.fire({
+          title: "Error!",
+          text: "An Unexpected Error Occured",
+          icon: "error",
+        });
+      }
     },
   });
 });
@@ -199,6 +222,7 @@ $("#loginform").submit(function (event) {
 function logoutcall() {
   document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
   document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+  document.cookie = "id=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
   window.location.replace("./login.html");
   // Prevent default form submission
   //   var token = getCookie("token");
@@ -240,7 +264,10 @@ function settoken() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const product = urlParams.get("name");
+  const id = urlParams.get("id");
+  // console.log(id);
   document.cookie = `token=${product}`;
+  document.cookie = `id=${id}`;
   location.replace("./index.html");
 }
 //get-in-touch
@@ -296,52 +323,278 @@ $("#changepassform").submit(function (event) {
   var newpass = document.getElementById("newpass").value;
   var confirmpass = document.getElementById("confirmpass").value;
   var currentpass = document.getElementById("currentpass").value;
-
-  document.getElementById("loader1").style.visibility = "visible";
-  $.ajax({
-    type: "POST",
-    url: `${baseurl}/change-password`,
-    data: {
-      current_password: currentpass,
-      confirm_new_password: confirmpass,
-      new_password: newpass,
-    },
-    success: function (response) {
-      // console.log(response.token);
-      document.getElementById("loader1").style.visibility = "hidden";
-      Swal.fire({
-        icon: "success",
-        title: "Successful!",
-        text: "Password Changed Successfully!",
-        // allowOutsideClick: false,
-      });
-      $("button.swal2-confirm").click(function () {
-        // alert("asdf");
-        window.location.reload();
-      });
-    },
-
-    error: function (response) {
-      document.getElementById("loader1").style.visibility = "hidden";
-      // console.log(response);
-      if (response.message == "Unauthorized") {
+  var id = getCookie("id");
+  // console.log(id);
+  if (id == "" || typeof id == "undefined" || id == null) {
+    Swal.fire({
+      icon: "error",
+      title: "Failed!",
+      text: "Please Login!",
+      // allowOutsideClick: false,
+    });
+    $("button.swal2-confirm").click(function () {
+      // alert("asdf");
+      window.location.replace("./login.html");
+    });
+  } else {
+    document.getElementById("loader1").style.visibility = "visible";
+    $.ajax({
+      type: "POST",
+      url: `${baseurl}/change-password`,
+      data: {
+        id: id,
+        current_password: currentpass,
+        confirm_new_password: confirmpass,
+        new_password: newpass,
+      },
+      success: function (response) {
+        // console.log(response);
+        document.getElementById("loader1").style.visibility = "hidden";
         Swal.fire({
-          icon: "error",
-          title: "Failed!",
-          text: "Please Login!",
+          icon: "success",
+          title: "Successful!",
+          text: "Password Changed Successfully!",
           // allowOutsideClick: false,
         });
         $("button.swal2-confirm").click(function () {
           // alert("asdf");
+          window.location.reload();
+        });
+      },
+
+      error: function (response) {
+        // console.log(response);
+        document.getElementById("loader1").style.visibility = "hidden";
+        // console.log(response);
+        if (response.responseJSON.message == "Unauthorized") {
+          Swal.fire({
+            icon: "error",
+            title: "Failed!",
+            text: "Please Login!",
+            // allowOutsideClick: false,
+          });
+          $("button.swal2-confirm").click(function () {
+            // alert("asdf");
+            window.location.replace("./login.html");
+          });
+        } else if (response.responseJSON.error == "Invalid current password") {
+          Swal.fire({
+            title: "Error!",
+            text: "Old Password is Incorrect",
+            icon: "error",
+          });
+        } else {
+          Swal.fire({
+            title: "Error!",
+            text: "An Unexpected Error Occured",
+            icon: "error",
+          });
+        }
+      },
+    });
+  }
+});
+
+// change-email
+
+$("#newemailform").submit(function (event) {
+  // Prevent default form submission
+  event.preventDefault();
+  var newchangeemail = document.getElementById("newchangeemail").value;
+  document.getElementById("newemail").value = newchangeemail;
+  newemail;
+  var id = getCookie("id");
+  $("#newEmailVerificationModal").modal("hide");
+  // console.log(id);
+  if (id == "" || typeof id == "undefined" || id == null) {
+    Swal.fire({
+      icon: "error",
+      title: "Failed!",
+      text: "Please Login!",
+      // allowOutsideClick: false,
+    });
+    $("button.swal2-confirm").click(function () {
+      // alert("asdf");
+      window.location.replace("./login.html");
+    });
+  } else {
+    document.getElementById("loader1").style.visibility = "visible";
+    $.ajax({
+      type: "POST",
+      url: `${baseurl}/send-verification-code`,
+      data: {
+        id: id,
+        current_email: newchangeemail,
+      },
+      success: function (response) {
+        // console.log(response);
+        document.getElementById("loader1").style.visibility = "hidden";
+        Swal.fire({
+          icon: "success",
+          title: "Successful!",
+          text: "Code sent. Please check your email!",
+          // allowOutsideClick: false,
+        });
+        $("button.swal2-confirm").click(function () {
+          // alert("asdf");
+          $("#verificationModal").modal("show");
+          // window.location.reload();
+        });
+      },
+
+      error: function (response) {
+        // console.log(response);
+        document.getElementById("loader1").style.visibility = "hidden";
+        // console.log(response);
+        if (response.responseJSON.message == "Unauthorized") {
+          Swal.fire({
+            icon: "error",
+            title: "Failed!",
+            text: "Please Login!",
+            // allowOutsideClick: false,
+          });
+          $("button.swal2-confirm").click(function () {
+            // alert("asdf");
+            window.location.replace("./login.html");
+          });
+        } else {
+          Swal.fire({
+            title: "Error!",
+            text: "An Unexpected Error Occured",
+            icon: "error",
+          });
+        }
+      },
+    });
+  }
+});
+
+// verificationcodeform
+
+$("#verificationcodeform").submit(function (event) {
+  // Prevent default form submission
+  event.preventDefault();
+  var verificationcode = document.getElementById("verificationcode").value;
+  var newemail = document.getElementById("newemail").value;
+
+  var id = getCookie("id");
+  $("#verificationModal").modal("hide");
+  // console.log(id);
+  if (id == "" || typeof id == "undefined" || id == null) {
+    Swal.fire({
+      icon: "error",
+      title: "Failed!",
+      text: "Please Login!",
+      // allowOutsideClick: false,
+    });
+    $("button.swal2-confirm").click(function () {
+      // alert("asdf");
+      window.location.replace("./login.html");
+    });
+  } else {
+    document.getElementById("loader1").style.visibility = "visible";
+    $.ajax({
+      type: "POST",
+      url: `${baseurl}/change-email`,
+      data: {
+        id: id,
+        new_email: newemail,
+        verification_code: verificationcode,
+      },
+      success: function (response) {
+        // console.log(response);
+        document.getElementById("loader1").style.visibility = "hidden";
+        Swal.fire({
+          icon: "success",
+          title: "Successful!",
+          text: "Email Updated!",
+          // allowOutsideClick: false,
+        });
+        $("button.swal2-confirm").click(function () {
+          // alert("asdf");
+          // $("#verificationModal").modal("show");
           window.location.replace("./login.html");
         });
-      } else {
-        Swal.fire({
-          title: "Error!",
-          text: "An Unexpected Error Occured",
-          icon: "error",
-        });
-      }
-    },
-  });
+      },
+
+      error: function (response) {
+        // console.log(response);
+        document.getElementById("loader1").style.visibility = "hidden";
+        // console.log(response);
+        if (response.responseJSON.message == "Unauthorized") {
+          Swal.fire({
+            icon: "error",
+            title: "Failed!",
+            text: "Please Login!",
+            // allowOutsideClick: false,
+          });
+          $("button.swal2-confirm").click(function () {
+            // alert("asdf");
+            window.location.replace("./login.html");
+          });
+        } else {
+          Swal.fire({
+            title: "Error!",
+            text: "An Unexpected Error Occured",
+            icon: "error",
+          });
+        }
+      },
+    });
+  }
 });
+
+// get_user
+
+function getdataoftheuser() {
+  var id = getCookie("id");
+  // console.log(id);
+  if (id == "" || typeof id == "undefined" || id == null) {
+    Swal.fire({
+      icon: "error",
+      title: "Failed!",
+      text: "Please Login!",
+      // allowOutsideClick: false,
+    });
+    $("button.swal2-confirm").click(function () {
+      // alert("asdf");
+      window.location.replace("./login.html");
+    });
+  } else {
+    document.getElementById("loader1").style.visibility = "visible";
+    $.ajax({
+      type: "get",
+      url: `${baseurl}/get-user/${id}`,
+      success: function (response) {
+        // console.log(response);
+        document.getElementById("loader1").style.visibility = "hidden";
+        document.getElementById("currentemail").value = response.email;
+        document.getElementById("currentname").value = response.name;
+      },
+
+      error: function (response) {
+        // console.log(response);
+        document.getElementById("loader1").style.visibility = "hidden";
+        // console.log(response);
+        if (response.responseJSON.message == "Unauthorized") {
+          Swal.fire({
+            icon: "error",
+            title: "Failed!",
+            text: "Please Login!",
+            // allowOutsideClick: false,
+          });
+          $("button.swal2-confirm").click(function () {
+            // alert("asdf");
+            window.location.replace("./login.html");
+          });
+        } else {
+          Swal.fire({
+            title: "Error!",
+            text: "An Unexpected Error Occured",
+            icon: "error",
+          });
+        }
+      },
+    });
+  }
+}

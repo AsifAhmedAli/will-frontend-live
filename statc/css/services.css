@@ -1,0 +1,291 @@
+.srvs h1{
+    font-family: 'Manrope';
+font-style: normal;
+font-weight: 600;
+font-size: 42px;
+line-height: 57px;
+text-align: center;
+color: #34303D;
+}
+.srvs p {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 29px;
+text-align: center;
+color: #6C6973;
+}
+
+/* Media queries for candidate summary generator */
+@media screen and (max-width: 1245px){
+    .srvs h1{
+    font-size: 36px;
+    line-height: 50px;
+    
+    }
+   
+    
+}
+
+
+@media screen and (max-width: 1072px){
+    .srvs h1{
+        font-size: 32px;
+        line-height: 50px;
+        
+        }
+  
+}
+
+@media screen and (max-width: 992px){
+    .srvs p {
+        line-height: 27px;
+        text-align: start;
+    }
+
+}
+
+
+
+@media screen and (max-width: 768px){
+    .srvs h1{
+        font-size: 30px;
+        line-height: 40px;
+        
+        }
+        .srvs p {
+            line-height: 27px;
+            text-align: start;
+        }
+   
+}
+
+
+@media screen and (max-width: 576px){
+    .srvs h1{
+        font-size: 22px;
+        line-height: 35px;
+        
+        }
+        .srvs p {
+            line-height: 25px;
+            text-align: start;
+        }
+    
+}
+@media screen and (max-width: 476px){
+   
+    
+}
+.services-buttons{
+    display: flex;
+    flex-wrap: wrap;
+  
+    
+}
+.services-buttons a{
+    text-decoration: none;
+    color: #1653D1;
+}
+
+.best-services h1{
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 600;
+font-size: 42px;
+line-height: 54px;
+text-align: center;
+color: #34303D;
+}
+.services-buttons button{
+    padding: 20px 30px 20px 30px;
+    color: #1653D1;
+    border: 1px solid #1653D1;
+    margin: 10px;
+    margin-top: 30px;
+    border-radius: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+   
+
+}
+
+/* Media queries for best services section */
+@media screen and (max-width: 1245px){
+    .services-buttons button{
+        margin-top: 20px;
+    }
+    .best-services h1{
+        font-size: 36px;
+        line-height: 45px;
+        }
+    
+}
+
+
+
+@media screen and (max-width: 1072px){
+    .services-buttons button{
+        margin-top: 15px;
+    }
+    
+    .best-services h1{
+        font-size: 36px;
+        line-height: 45px;
+        }
+}
+
+@media screen and (max-width: 991px){
+    .services-buttons{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 5px;
+        
+    }
+
+    .best-services h1{
+        font-size: 32px;
+        line-height: 45px;
+        }
+}
+
+@media screen and (max-width: 768px){
+    .best-services h1{
+        font-size: 28px;
+        line-height: 40px;
+        }
+  
+}
+
+
+@media screen and (max-width: 576px){
+    .best-services h1{
+        font-size: 24px;
+        line-height: 34px;
+        }
+  
+
+    
+}
+@media screen and (max-width: 476px){
+    .services-buttons{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 5px;
+    }
+    .best-services h1{
+        font-size: 20px;
+        line-height: 30px;
+        }
+
+    
+}
+
+
+.indented-paragraph {
+    margin-left: 10.5em;
+}
+
+.indented-paragraph h1{
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 600;
+font-size: 42px;
+line-height: 57px;
+color: #34303D;
+}
+
+.indented-paragraph p{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 29px;
+color: #6C6973;
+}
+
+
+/* Media queries for candidate summary generator */
+@media screen and (max-width: 1245px){
+    .indented-paragraph {
+        margin-left: 5.5em;
+    }
+    
+    .indented-paragraph h1{
+    font-weight: 600;
+    font-size: 32px;
+    
+    }
+    
+}
+
+
+
+@media screen and (max-width: 1072px){
+    .indented-paragraph {
+        margin-left: 3.5em;
+    }
+    
+    .indented-paragraph h1{
+    font-weight: 600;
+    font-size: 28px;
+    
+    }
+    
+}
+
+@media screen and (max-width: 991px){
+    .indented-paragraph {
+        margin-left: 2.5em;
+    }
+    
+    .indented-paragraph h1{
+    font-weight: 600;
+    font-size: 25px;
+    
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .indented-paragraph {
+        margin-left: 5px;
+    }
+    
+    .indented-paragraph h1{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 25px;
+    
+    }
+}
+
+
+@media screen and (max-width: 576px){
+  
+    .indented-paragraph h1{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    
+    }
+
+    .indented-paragraph p{
+      
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #6C6973;
+    }
+    
+}
+
+
+
+

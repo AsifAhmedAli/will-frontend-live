@@ -76,7 +76,8 @@
     <title>Profile Settings</title>
 </head>
 
-<body>
+<body onload="getdataoftheuser()">
+
 
     <!-- update password modal-->
     <div class="modal fade" id="passwordUpdateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -125,35 +126,6 @@
         </div>
     </div>
 
-    <!-- update email modal-->
-    <div class="modal fade" id="emailUpdateModal" tabindex="-1" aria-labelledby="emailUpdateModal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content py-5">
-                <div class="">
-                    <h5 class="change_info_form_header manrope_font text-center">Change your Email</h5>
-                    <form action="" method="POST" class="needs-validation auth_form p-4" style="font-size: 13px;" novalidate="" autocomplete="off">
-                        
-                        <!-- email -->
-                        <div class="mb-3 auth_input_container">
-                            <label class="mb-2 auth_input_label inter_font" for="email">Verify existing email<sup style="color:red;">*</sup></label>
-                            <input id="email" placeholder="jr0131511@gmail.com" type="email" style="font-size: 13px; text-transform: lowercase;"class="form-control auth_input px-3 py-2 inter_font" name="username" value="" required>
-                            <div class="invalid-feedback">
-                                <img src="statc/img/info-circle.png" alt="danger icon"> email is not vaild
-                            </div>
-                        </div>
-    
-                        <div class="d-flex justify-content-end">
-                            <button type="button" class="btn d-block update_cancel_btn mx-1 inter_font" data-bs-dismiss="modal">Cancel</button>
-                            <button class="btn d-block update_cancel_btn mx-1 inter_font update_cancel_btn_active" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#verificationModal">Send verification code</button>
-                        </div>
-                        
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
     <!-- successfull message modal-->
     <div class="modal fade" id="successMessageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -173,12 +145,13 @@
             <div class="modal-content py-5">
                 <div class="">
                     <h5 class="change_info_form_header manrope_font text-center">Enter your code</h5>
-                    <form action="" method="POST" class="needs-validation auth_form p-4" style="font-size: 13px;" novalidate="" autocomplete="off">
+                    <form class="needs-validation auth_form p-4" style="font-size: 13px;" novalidate="" autocomplete="off" id="verificationcodeform">
                         
                         <!-- verification code -->
                         <div class="mb-3 auth_input_container">
                             <label class="mb-2 auth_input_label inter_font" for="email">Verification code<sup style="color:red;">*</sup></label>
-                            <input id="email" placeholder="4353453" type="text" style="font-size: 13px; text-transform: lowercase;"class="form-control auth_input px-3 py-2 inter_font" name="username" value="" required>
+                            <input id="verificationcode" placeholder="********" type="text" style="font-size: 13px; text-transform: lowercase;"class="form-control auth_input px-3 py-2 inter_font" required>
+                            <input id="newemail" style="visibility: hidden;">
                             <div class="invalid-feedback">
                                 <img src="statc/img/info-circle.png" alt="danger icon"> code is not vaild
                             </div>
@@ -186,7 +159,7 @@
     
                         <div class="d-flex justify-content-end">
                             <button type="button" class="btn d-block update_cancel_btn mx-1 inter_font" data-bs-dismiss="modal">Cancel</button>
-                            <button class="btn d-block update_cancel_btn mx-1 inter_font update_cancel_btn_active" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#newEmailVerificationModal">Confirm</button>
+                            <button class="btn d-block update_cancel_btn mx-1 inter_font update_cancel_btn_active" type="submit">Confirm</button>
                         </div>
                         
                     </form>
@@ -216,12 +189,12 @@
             <div class="modal-content py-5">
                 <div class="">
                     <h5 class="change_info_form_header manrope_font text-center">Enter new email</h5>
-                    <form action="" method="POST" class="needs-validation auth_form p-4" style="font-size: 13px;" novalidate="" autocomplete="off">
+                    <form class="needs-validation auth_form p-4" style="font-size: 13px;" novalidate="" autocomplete="off" id="newemailform">
                         
                         <!-- new email -->
                         <div class="mb-3 auth_input_container">
                             <label class="mb-2 auth_input_label inter_font" for="email">Enter new email<sup style="color:red;">*</sup></label>
-                            <input id="email" placeholder="enter email" type="text" style="font-size: 13px; text-transform: lowercase;"class="form-control auth_input px-3 py-2 inter_font" name="username" value="" required>
+                            <input id="newchangeemail" placeholder="Enter Email" type="email" style="font-size: 13px; text-transform: lowercase;"class="form-control auth_input px-3 py-2 inter_font" required>
                             <div class="invalid-feedback">
                                 <img src="statc/img/info-circle.png" alt="danger icon"> email is not vaild
                             </div>
@@ -229,7 +202,8 @@
     
                         <div class="d-flex justify-content-end">
                             <button type="button" class="btn d-block update_cancel_btn mx-1 inter_font" data-bs-dismiss="modal">Cancel</button>
-                            <button class="btn d-block update_cancel_btn mx-1 inter_font update_cancel_btn_active" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#EmailsuccessMessageModal">Confirm</button>
+                            <!-- <button class="btn d-block update_cancel_btn mx-1 inter_font update_cancel_btn_active" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#verificationModal">Confirm</button> -->
+                            <button class="btn d-block update_cancel_btn mx-1 inter_font update_cancel_btn_active" type="submit">Confirm</button>
                         </div>
                         
                     </form>
@@ -300,23 +274,23 @@
     
                 <div class="col-lg-9 col-md-8 col-12 ps-4 py-5 py-md-0 py-lg-0">
 
-                    <form action="#!" class="">
+                    <form>
                         <div class="service_main_container p-4">
                             <h5 class="profle_info_form_heading manrope_font">Basic Details</h5>
 
                             <div class="profile_setting_item_container py-2">
                                 <label class="profile_input_label inter_font d-block">Email</label>
-                                <input class="profile_setting_input col-12 col-md-6 col-lg-5 mt-2" type="email" placeholder="jr0131511@gmail.com">
+                                <input class="profile_setting_input col-12 col-md-6 col-lg-5 mt-2" type="email" id="currentemail" disabled>
                             </div>
 
                             <div class="profile_setting_item_container py-2">
                                 <label class="profile_input_label inter_font d-block">Name</label>
-                                <input class="profile_setting_input col-12 col-md-6 col-lg-5 mt-2" type="text" placeholder="jr0131511@gmail.com">
+                                <input class="profile_setting_input col-12 col-md-6 col-lg-5 mt-2" type="text" id="currentname" disabled>
                             </div>
 
                             <div class="d-flex change_password_mail_container my-3">
                                 <a href="#!" class="d-block inter_font mx-1" data-bs-toggle="modal" data-bs-target="#passwordUpdateModal">Change Password</a>
-                                <a href="#!" class="d-block inter_font mx-1" data-bs-toggle="modal" data-bs-target="#emailUpdateModal">Change Email</a>
+                                <a href="#!" class="d-block inter_font mx-1" data-bs-toggle="modal" data-bs-target="#newEmailVerificationModal">Change Email</a>
                             </div>
 
                             <!-- Apps preferences -->

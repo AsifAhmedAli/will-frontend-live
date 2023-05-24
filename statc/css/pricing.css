@@ -1,0 +1,146 @@
+.pricing-feature-heading{
+    background: #E8EFFF;
+    border: 1px solid #E4E4E4;
+    padding: 8px;
+    
+}
+
+.pricing-feature-heading h1{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 31.2px;
+/* or 31px */
+
+text-align: center;
+
+/* text-color */
+
+color: #34303D;
+    
+}
+
+.pricing-heading{
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 600;
+font-size: 42px;
+line-height: 57px;
+
+/* text-color */
+
+color: #34303D;
+}
+
+.pricing-para p{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 160%;
+/* or 29px */
+
+text-align: center;
+
+/* secondary-text */
+
+color: #6C6973;
+margin-bottom: 50px;
+}
+
+table thead .first-td{
+    width: 210px !important;
+}
+
+table thead th{
+    font-family: 'Inter';
+    width: 100px;
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 130%;
+/* identical to box height, or 26px */
+
+text-align: center;
+
+/* Blue */
+
+color: #1653D1;
+}
+tbody td{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 130%;
+/* or 21px */
+
+text-align: center;
+
+/* secondary-text */
+
+color: #6C6973;
+
+}
+.table-l-heading{
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    /* identical to box height, or 26px */
+    
+    
+    /* text-color */
+    
+    color: #34303D;
+
+}
+
+tbody th{
+
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 130%;
+text-align: start;
+/* identical to box height, or 26px */
+
+
+/* text-color */
+
+color: #34303D;
+}
+
+.pricing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .pricing-heading {
+    margin: 0;
+  }
+  
+  .pricing-para {
+    margin-top: 20px;
+  }
+  
+ 
+  
+  table {
+    margin: 0 auto;
+  }
+  
+  th, td {
+    vertical-align: middle;
+  }
+  
+  th[colspan="7"] {
+    text-align: center;
+  }
