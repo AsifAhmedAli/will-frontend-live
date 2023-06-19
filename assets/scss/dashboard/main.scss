@@ -1,0 +1,225 @@
+$suggested-candidate-width: 286px;
+
+.dashboard-container {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+main {
+  width: calc(100% - $aside-width - $suggested-candidate-width);
+  margin-left: auto;
+  margin-right: $suggested-candidate-width;
+  height: 100vh;
+  &.full {
+    width: calc(100% - $aside-width);
+    margin-right: unset;
+    header {
+      .right {
+        #toggle-suggestions {
+          position: relative;
+          right: unset;
+        }
+      }
+    }
+  }
+
+  .dashboard-body {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 24px;
+    position: relative;
+    top: -78px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+  }
+}
+
+.chat-box {
+  position: fixed;
+  z-index: 1051;
+  bottom: 0;
+  left: $aside-width;
+  width: calc(100% - $aside-width - $suggested-candidate-width);
+  padding: 0 3rem;
+  padding-bottom: 24px;
+  background: white;
+  &.full {
+    width: calc(100% - $aside-width);
+  }
+  .box {
+    padding: 8px 1rem;
+    border-radius: $border-radius;
+    box-shadow: 0 0 47px rgba($color: $primary, $alpha: 0.1);
+    border: 1px solid $shadow-color-dark;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    textarea {
+      border: none;
+      height: 32px;
+      vertical-align: middle;
+    }
+    .icon-btn {
+      box-shadow: none;
+      &:not(.send-btn) {
+        background-color: $primarylight;
+      }
+    }
+  }
+}
+
+.suggested-candidates {
+  #close-suggested-cd {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 1;
+    display: none;
+  }
+  padding: 1rem;
+  min-width: $suggested-candidate-width;
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  border-left: 1px solid rgba($color: $dark, $alpha: 0.1);
+  &.collapsed {
+    transform: translateX($suggested-candidate-width);
+  }
+  > div {
+    height: 50%;
+    overflow-y: auto;
+    &:not(:last-child) {
+      border-bottom: 1px solid $shadow-color-dark;
+    }
+  }
+  .heading {
+    padding-left: 1rem;
+    padding-top: 12px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    h5 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  }
+  .candidates {
+    .candidate {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      text-decoration: none;
+      margin-bottom: 24px;
+      img {
+        min-width: 50px;
+        min-height: 50px;
+        max-width: 50px;
+        max-height: 50px;
+        border-radius: 50%;
+      }
+      .data {
+        .name {
+          font-size: 1rem;
+          margin-bottom: 2px;
+          color: $dark;
+        }
+        .designation {
+          color: $secondary;
+          font-size: 12px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.chat-container {
+  padding: 104px 0 60px;
+}
+
+.chats {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  .chat {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 20px;
+    &.me {
+      flex-direction: row-reverse;
+      .chat-text-box {
+        background-color: $primarylight;
+        box-shadow: none;
+        border-radius: $border-radius 0 $border-radius $border-radius;
+      }
+    }
+    .ai-image {
+      min-width: 50px;
+      min-height: 50px;
+      max-width: 50px;
+      max-height: 50px;
+      border-radius: 50%;
+    }
+    .chat-text-box {
+      font-size: 14px;
+      padding: 12px 1rem;
+      background-color: white;
+      border-radius: 0 $border-radius $border-radius $border-radius;
+      box-shadow: 0 4px 4px rgba($color: $dark, $alpha: 0.1);
+      width: 75%;
+      .chat-response {
+        margin-bottom: 0;
+      }
+      .date-time {
+        font-size: 11px;
+        margin-bottom: 0;
+        margin-top: 2px;
+        text-align: right;
+        color: $secondary;
+      }
+    }
+    .copy {
+      background-color: transparent;
+      border: none;
+      color: $secondary;
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:hover {
+      .copy {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.chat-history-canvas {
+  .chat-container {
+    padding-top: 0;
+    padding-bottom: 0;
+    .chats {
+      .chat {
+        max-width: 100%;
+      }
+    }
+    .ai-image {
+      min-width: 32px !important;
+      min-height: 32px !important;
+      max-width: 32px !important;
+      max-height: 32px !important;
+    }
+  }
+}

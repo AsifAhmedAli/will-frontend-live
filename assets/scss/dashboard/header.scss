@@ -1,0 +1,37 @@
+#toggle-menu {
+  display: none;
+}
+
+main {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 1rem 3rem;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    box-shadow: 0 4px 12px rgba($color: $dark, $alpha: 0.1);
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      .header-heading {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      .toggle-suggestion {
+        position: absolute;
+        right: -1.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+
+  <body class="dashboard-container" onload="getdataoftheuser1()">
+    <aside>
+      <div class="text-end">
+        <button class="btn-close" id="close-sidebar"></button>
+      </div>
+      <a href="" class="logo">
+        <img src="./assets/images/pure_talent_logo.svg" height="60" alt="" />
+      </a>
+      <ul class="sidemenu">
+        <li class="has-submenu active">
+          <button class="menu-link">
+            <span class="material-symbols material-symbols-rounded"
+              >data_loss_prevention</span
+            >
+            <p>Recruiting</p>
+          </button>
+          <ul>
+            <li>
+              <a href="./dashboard_tech_qs.html" class="submenu-link">
+                <span class="material-symbols material-symbols-rounded"
+                  >work</span
+                >
+                <p>Technical Questions</p>
+              </a>
+            </li>
+            <li class="active">
+              <a href="./dashboard_boolean_search.html" class="submenu-link">
+                <span class="material-symbols material-symbols-rounded"
+                  >find_replace</span
+                >
+                <p>Boolean Search</p>
+              </a>
+            </li>
+            <li>
+              <a href="./dashboard_keyword_search.html" class="submenu-link">
+                <span class="material-symbols material-symbols-rounded"
+                  >ads_click</span
+                >
+                <p>Keyword Search</p>
+              </a>
+            </li>
+            <li>
+              <a href="./dashboard_cd_resume.html" class="submenu-link">
+                <span class="material-symbols material-symbols-rounded"
+                  >summarize</span
+                >
+                <p>Candidate Summary</p>
+              </a>
+            </li>
+            <li>
+              <a href="./dashboard_job_description.html" class="submenu-link">
+                <span class="material-symbols material-symbols-rounded"
+                  >description</span
+                >
+                <p>Job Description</p>
+              </a>
+            </li>
+            <li>
+              <a href="./dashboard_emails.html" class="submenu-link">
+                <span class="material-symbols material-symbols-rounded"
+                  >mail</span
+                >
+                <p>Emails</p>
+              </a>
+            </li>
+            <li>
+              <a href="./dashboard_reference_check.html" class="submenu-link">
+                <span class="material-symbols material-symbols-rounded"
+                  >quick_reference</span
+                >
+                <p>Reference Check Generator</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="has-submenu collapsed">
+          <button class="menu-link">
+            <span class="material-symbols material-symbols-rounded">sell</span>
+            <p>Sales</p>
+          </button>
+          <ul>
+            <li>
+              <a href="./dashboard_market_resume.html" class="submenu-link">
+                <span class="material-symbols material-symbols-rounded"
+                  >work</span
+                >
+                <p>Market Resume Generator</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <hr class="my-0" />
+        </li>
+        <li>
+          <a href="" class="menu-link">
+            <span class="material-symbols material-symbols-rounded"
+              >person</span
+            >
+            <p>Candidates</p>
+          </a>
+        </li>
+        <li>
+          <a href="" class="menu-link">
+            <span class="material-symbols material-symbols-rounded"
+              >handshake</span
+            >
+            <p>Clients</p>
+          </a>
+        </li>
+        <li>
+          <a href="" class="menu-link">
+            <span class="material-symbols material-symbols-rounded"
+              >contacts</span
+            >
+            <p>Contacts</p>
+          </a>
+        </li>
+        <li>
+          <hr class="my-0" />
+        </li>
+        <li>
+          <a href="./profile_settings.html" class="menu-link">
+            <span class="material-symbols material-symbols-rounded"
+              >account_circle</span
+            >
+            <p>Profile</p>
+          </a>
+        </li>
+        <li>
+          <button onclick="logoutcall()" class="menu-link logout">
+            <span class="material-symbols material-symbols-rounded"
+              >logout</span
+            >
+            <p>Logout</p>
+          </button>
+        </li>
+      </ul>
+    </aside>
+    <main>
+      <header>
+        <div class="left">
+          <button
+            class="btn icon-btn btn-light toggle-suggestion"
+            id="toggle-menu"
+          >
+            <span class="material-symbols material-symbols-rounded">
+              menu
+            </span>
+          </button>
+          <h4 class="header-heading">Boolean Seach Generator</h4>
+        </div>
+        <div class="right">
+          <button
+            class="btn btn-outline-primary"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#chatHistory"
+            aria-controls="chatHistory"
+          >
+            <span class="material-symbols material-symbols-rounded"
+              >replay</span
+            >
+            Chat History
+          </button>
+          <button class="btn btn-primary">
+            <span class="material-symbols material-symbols-rounded">add</span>
+            New Chat
+          </button>
+          <button
+            class="btn icon-btn btn-light toggle-suggestion"
+            id="toggle-suggestions"
+          >
+            <span class="material-symbols material-symbols-rounded">
+              chevron_right
+            </span>
+          </button>
+        </div>
+      </header>
+      <div class="dashboard-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="chat-container">
+              <div class="chats">
+                <div class="chat me">
+                  <div class="chat-text-box">
+                    <p class="chat-response">
+                      Create a boolean search for cosmetic scientist
+                    </p>
+                    <p class="date-time">June 25, 2023 08:33 PM</p>
+                  </div>
+                  <button
+                    class="copy"
+                    data-bs-toggle="tooltip"
+                    title="Copy query"
+                  >
+                    <span class="material-symbols material-symbols-rounded"
+                      >content_copy</span
+                    >
+                  </button>
+                </div>
+                <div class="chat">
+                  <img
+                    src="./assets/images/user-img.png"
+                    class="ai-image"
+                    alt=""
+                  />
+                  <div class="chat-text-box">
+                    <p class="chat-response">
+                      ("cosmetic" OR "beauty") AND ("scientist" OR "researcher"
+                      OR "formulator" OR "chemist" OR "expert")
+                    </p>
+                    <p class="date-time">June 25, 2023 08:33 PM</p>
+                  </div>
+                  <button
+                    class="copy"
+                    data-bs-toggle="tooltip"
+                    title="Copy response"
+                  >
+                    <span class="material-symbols material-symbols-rounded"
+                      >content_copy</span
+                    >
+                  </button>
+                </div>
+                <div class="chat me">
+                  <div class="chat-text-box">
+                    <p class="chat-response">
+                      Create a boolean search for cosmetic scientist
+                    </p>
+                    <p class="date-time">June 25, 2023 08:33 PM</p>
+                  </div>
+                  <button
+                    class="copy"
+                    data-bs-toggle="tooltip"
+                    title="Copy query"
+                  >
+                    <span class="material-symbols material-symbols-rounded"
+                      >content_copy</span
+                    >
+                  </button>
+                </div>
+                <div class="chat">
+                  <img
+                    src="./assets/images/user-img.png"
+                    class="ai-image"
+                    alt=""
+                  />
+                  <div class="chat-text-box">
+                    <p class="chat-response">
+                      ("cosmetic" OR "beauty") AND ("scientist" OR "researcher"
+                      OR "formulator" OR "chemist" OR "expert")
+                    </p>
+                    <p class="date-time">June 25, 2023 08:33 PM</p>
+                  </div>
+                  <button
+                    class="copy"
+                    data-bs-toggle="tooltip"
+                    title="Copy response"
+                  >
+                    <span class="material-symbols material-symbols-rounded"
+                      >content_copy</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-box">
+          <div class="container-fluid">
+            <form id="chat_form">
+              <div class="box">
+                <button
+                  type="button"
+                  data-bs-toggle="tooltip"
+                  title="Upload resume or job description"
+                  class="btn btn-primarylight icon-btn"
+                  onclick="document.getElementById('attach_file').click()"
+                >
+                  <span class="materials-symbols material-symbols-rounded"
+                    >upload</span
+                  >
+                  <input type="file" name="attach_file" id="attach_file" accept=".doc, .docx, .txt" class="d-none" />
+                </button>
+                <!-- <button type="button" data-bs-toggle="tooltip" title="Add more options"
+                class="btn btn-primarylight icon-btn">
+                <span class="materials-symbols material-symbols-rounded">docs_add_on</span>
+              </button> -->
+                <textarea
+                  name=""
+                  id="prompt"
+                  required
+                  cols="30"
+                  placeholder="Prompt e.g. “Create a boolean search for help desk IT”"
+                  class="flex-fill"
+                ></textarea>
+                <button class="btn btn-light icon-btn send-btn" type="submit">
+                  <span class="material-symbols material-symbols-rounded"
+                    >send</span
+                  >
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="suggested-candidates">
+      <button class="btn-close" id="close-suggested-cd"></button>
+      <div class="top-1">
+        <div class="heading">
+          <h5>Suggested Candidates</h5>
+        </div>
+        <div class="candidates">
+          <a href="" class="candidate">
+            <img src="https://picsum.photos/200/300" alt="" />
+            <div class="data">
+              <p class="name">Travor Holmes</p>
+              <p class="designation">UX Designer</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="top-2">
+        <div class="heading">
+          <h5>Similar Candidates</h5>
+        </div>
+        <div class="candidates">
+          <a href="" class="candidate">
+            <img src="https://picsum.photos/200/300" alt="" />
+            <div class="data">
+              <p class="name">Travor Holmes</p>
+              <p class="designation">UX Designer</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="offcanvas offcanvas-start chat-history-canvas"
+      tabindex="-1"
+      id="chatHistory"
+      aria-labelledby="chatHistoryLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="chatHistoryLabel">Chat History</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="chat-container">
+          <div class="chats">
+            <div class="chat me">
+              <div class="chat-text-box">
+                Create a boolean search for cosmetic scientist
+                <p class="date-time">June 25, 2023 08:33 PM</p>
+              </div>
+              <button class="copy" data-bs-toggle="tooltip" title="Copy query">
+                <span class="material-symbols material-symbols-rounded"
+                  >content_copy</span
+                >
+              </button>
+            </div>
+            <div class="chat">
+              <img src="./assets/images/user-img.png" class="ai-image" alt="" />
+              <div class="chat-text-box">
+                Here's Boolean search
+                <p class="date-time">June 25, 2023 08:33 PM</p>
+              </div>
+              <button
+                class="copy"
+                data-bs-toggle="tooltip"
+                title="Copy response"
+              >
+                <span class="material-symbols material-symbols-rounded"
+                  >content_copy</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="loading" id="loader1" style="visibility: hidden;">Loading&#8230;</div>
+        <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./statc/js/all.js"></script>
+    <script src="./statc/js/calls.js"></script>
+    <script src="./statc//js/boolean_search.js"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+@include media-breakpoint-down(xl) {
+  aside {
+    display: none;
+    box-shadow: 17px 0 47px $shadow-color-dark;
+    #close-sidebar {
+      display: block;
+      margin-left: auto;
+    }
+  }
+  #toggle-menu {
+    display: block;
+  }
+
+  main {
+    width: calc(100% - $suggested-candidate-width);
+    &.full {
+      width: 100%;
+    }
+  }
+
+  .chat-box {
+    width: calc(100% - $suggested-candidate-width);
+    left: 0;
+    &.full {
+      width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .suggested-candidates {
+    display: none;
+    #close-suggested-cd {
+      display: block;
+    }
+    &.open {
+      display: block;
+      z-index: 1051;
+      background: white;
+      box-shadow: -17px 0 47px $shadow-color-dark;
+    }
+  }
+
+  main {
+    width: 100%;
+    header {
+      .right {
+        .toggle-suggestion {
+          position: relative;
+          right: unset;
+        }
+      }
+    }
+  }
+
+  .chat-box {
+    width: 100%;
+  }
+
+  .chats {
+    .chat {
+      .ai-image {
+        min-width: 24px;
+        min-height: 24px;
+        max-width: 24px;
+        max-height: 24px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  main {
+    header {
+      padding: 1rem 0.5rem;
+      .right {
+        .btn-primary,
+        .btn-outline-primary {
+          padding: 0;
+          min-width: 45.6px;
+          min-height: 45.6px;
+          max-width: 45.6px;
+          max-height: 45.6px;
+          overflow: hidden;
+          text-align: left;
+          color: transparent !important;
+          font-size: 20px;
+          padding-left: 10px;
+        }
+        .btn-primary {
+          .material-symbols {
+            color: $white !important;
+          }
+        }
+        .btn-outline-primary {
+          .material-symbols {
+            color: $primary !important;
+          }
+          &:focus,
+          &:active {
+            .material-symbols {
+              color: $white !important;
+            }
+          }
+        }
+      }
+    }
+
+    .dashboard-body {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+
+  .chat-box {
+    padding: 1rem 0;
+  }
+}

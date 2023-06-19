@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+  </head>
+
+  <body class="dashboard-container">
+    <aside>
+      <div class="text-end">
+        <button class="btn-close" id="close-sidebar"></button>
+      </div>
+      <a href="" class="logo">
+        <img src="./assets/images/pure_talent_logo.svg" height="60" alt="" />
+      </a>
+      <ul class="sidemenu">
+        <li class="has-submenu active">
+          <button class="menu-link">
+            <span class="material-symbols material-symbols-rounded"
+              >data_loss_prevention</span
+            >
+            <p>Recruiting</p>
+          </button>
+          <ul>
+            <li>
+              <a href="./dashboard_tech_qs.html" class="submenu-link">
+                <span class="material-symbols material-symbols-rounded"
+                  >work</span
+                >
+                <p>Technical Questions</p>
+              </a>
+            </li>
+            <li>
+              <a href="./dashboard_boolean_search.html" class="submenu-link">
+                <span class="material-symbols material-symbols-rounded"
+                  >find_replace</span
+                >
+                <p>Boolean Search</p>
+              </a>
+            </li>
+            <li>
+              <a href="./dashboard_keyword_search.html" class="submenu-link">
+                <span class="material-symbols material-symbols-rounded"
+                  >ads_click</span
+                >
+                <p>Keyword Search</p>
+              </a>
+            </li>
+            <li>
+              <a href="./dashboard_cd_resume.html" class="submenu-link">
+                <span class="material-symbols material-symbols-rounded"
+                  >summarize</span
+                >
+                <p>Candidate Summary</p>
+              </a>
+            </li>
+            <li>
+              <a href="./dashboard_job_description.html" class="submenu-link">
+                <span class="material-symbols material-symbols-rounded"
+                  >description</span
+                >
+                <p>Job Description</p>
+              </a>
+            </li>
+            <li>
+              <a href="./dashboard_emails.html" class="submenu-link">
+                <span class="material-symbols material-symbols-rounded"
+                  >mail</span
+                >
+                <p>Emails</p>
+              </a>
+            </li>
+            <li class="active">
+              <a href="./dashboard_reference_check.html" class="submenu-link">
+                <span class="material-symbols material-symbols-rounded"
+                  >quick_reference</span
+                >
+                <p>Reference Check Generator</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="has-submenu collapsed">
+          <button class="menu-link">
+            <span class="material-symbols material-symbols-rounded">sell</span>
+            <p>Sales</p>
+          </button>
+          <ul>
+            <li>
+              <a href="./dashboard_market_resume.html" class="submenu-link">
+                <span class="material-symbols material-symbols-rounded"
+                  >work</span
+                >
+                <p>Market Resume Generator</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <hr class="my-0" />
+        </li>
+        <li>
+          <a href="" class="menu-link">
+            <span class="material-symbols material-symbols-rounded"
+              >person</span
+            >
+            <p>Candidates</p>
+          </a>
+        </li>
+        <li>
+          <a href="" class="menu-link">
+            <span class="material-symbols material-symbols-rounded"
+              >handshake</span
+            >
+            <p>Clients</p>
+          </a>
+        </li>
+        <li>
+          <a href="" class="menu-link">
+            <span class="material-symbols material-symbols-rounded"
+              >contacts</span
+            >
+            <p>Contacts</p>
+          </a>
+        </li>
+        <li>
+          <hr class="my-0" />
+        </li>
+        <li>
+          <a href="" class="menu-link">
+            <span class="material-symbols material-symbols-rounded"
+              >account_circle</span
+            >
+            <p>Profile</p>
+          </a>
+        </li>
+        <li>
+          <a href="" class="menu-link logout">
+            <span class="material-symbols material-symbols-rounded"
+              >logout</span
+            >
+            <p>Logout</p>
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <main>
+      <header>
+        <div class="left">
+          <button
+            class="btn icon-btn btn-light toggle-suggestion"
+            id="toggle-menu"
+          >
+            <span class="material-symbols material-symbols-rounded">
+              menu
+            </span>
+          </button>
+          <h4 class="header-heading">Reference Check Generator</h4>
+        </div>
+        <div class="right">
+          <button
+            class="btn btn-outline-primary"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#chatHistory"
+            aria-controls="chatHistory"
+          >
+            <span class="material-symbols material-symbols-rounded"
+              >replay</span
+            >
+            Chat History
+          </button>
+          <button class="btn btn-primary">
+            <span class="material-symbols material-symbols-rounded">add</span>
+            New Chat
+          </button>
+          <button
+            class="btn icon-btn btn-light toggle-suggestion"
+            id="toggle-suggestions"
+          >
+            <span class="material-symbols material-symbols-rounded">
+              chevron_right
+            </span>
+          </button>
+        </div>
+      </header>
+      <div class="dashboard-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="chat-container">
+              <div class="chats">
+                <div class="chat me">
+                  <div class="chat-text-box">
+                    Create a boolean search for cosmetic scientist
+                  </div>
+                  <button
+                    class="copy"
+                    data-bs-toggle="tooltip"
+                    title="Copy query"
+                  >
+                    <span class="material-symbols material-symbols-rounded"
+                      >content_copy</span
+                    >
+                  </button>
+                </div>
+                <div class="chat">
+                  <img
+                    src="./assets/images/user-img.png"
+                    class="ai-image"
+                    alt=""
+                  />
+                  <div class="chat-text-box">
+                    R&D in the cosmetic industry refers to the research and
+                    development activities undertaken by cosmetic companies to
+                    create new products, improve existing ones, and explore new
+                    technologies and formulations. R&D plays a crucial role in
+                    the cosmetic industry as it drives innovation, ensures
+                    product safety and efficacy, and helps companies stay
+                    competitive in the market. Here are some key aspects of R&D
+                    in the cosmetic industry: Product Development: R&D teams
+                    work on formulating new cosmetic products, such as skincare
+                    creams, lotions, makeup, haircare products, fragrances, and
+                    more. They conduct extensive research on ingredients,
+                    explore new combinations, and test various formulations to
+                    create innovative and effective products. Ingredient
+                    Research: R&D professionals study and evaluate different
+                    cosmetic ingredients to understand their properties,
+                    benefits, and potential side effects. They explore natural
+                    and synthetic ingredients, assess their compatibility, and
+                    determine their optimal concentrations in formulations.
+                    Safety and Regulatory Compliance: R&D teams ensure that
+                    cosmetic products meet safety regulations and comply with
+                    relevant industry standards. They conduct thorough safety
+                    assessments, including stability testing, irritation
+                    testing, and microbiological analysis, to ensure the
+                    products are safe for consumer use. Innovation and
+                    Technology: R&D departments continuously explore new
+                    technologies, scientific advancements, and manufacturing
+                    processes to improve cosmetic formulations. This may involve
+                    incorporating new active ingredients, utilizing advanced
+                    delivery systems, or implementing novel manufacturing
+                    techniques. Sustainability and Ethical Practices: With
+                    growing consumer demand for sustainable and ethical
+                    products, R&D in the cosmetic industry focuses on developing
+                    environmentally friendly formulations, reducing waste, and
+                    adopting cruelty-free testing methods. Research is conducted
+                    to find alternative ingredients, packaging materials, and
+                    manufacturing processes that minimize the industry's
+                    ecological footprint. Clinical Testing and Efficacy Studies:
+                    R&D teams may conduct clinical trials and efficacy studies
+                    to validate the claims made by cosmetic products. These
+                    studies involve testing the products on human subjects to
+                    assess their performance, effectiveness, and any potential
+                    side effects. Market Analysis and Consumer Insights: R&D
+                    professionals collaborate with market research teams to
+                    gather insights on consumer preferences, emerging trends,
+                    and market demands. This information helps shape the
+                    development of new products and formulations that align with
+                    consumer expectations. Overall, R&D in the cosmetic industry
+                    focuses on scientific research, formulation development,
+                    safety assessment, innovation, and sustainability. It plays
+                    a vital role in creating high-quality, safe, and effective
+                    cosmetic products that cater to the evolving needs and
+                    desires of consumers.
+                  </div>
+                  <button
+                    class="copy"
+                    data-bs-toggle="tooltip"
+                    title="Copy response"
+                  >
+                    <span class="material-symbols material-symbols-rounded"
+                      >content_copy</span
+                    >
+                  </button>
+                  <div class="dropdown">
+                    <button
+                      class="copy"
+                      title="Export"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="material-symbols material-symbols-rounded"
+                        >download</span
+                      >
+                    </button>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton1"
+                    >
+                      <li>
+                        <button class="dropdown-item">
+                          <span
+                            class="material-symbols material-symbols-rounded"
+                            >picture_as_pdf</span
+                          >
+                          Export PDF
+                        </button>
+                      </li>
+                      <div class="dropdown-divider"></div>
+                      <li>
+                        <button class="dropdown-item">
+                          <span
+                            class="material-symbols material-symbols-rounded"
+                            >article</span
+                          >
+                          Export Document
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="chat me">
+                  <div class="chat-text-box">
+                    Create a boolean search for cosmetic scientist
+                  </div>
+                  <button
+                    class="copy"
+                    data-bs-toggle="tooltip"
+                    title="Copy query"
+                  >
+                    <span class="material-symbols material-symbols-rounded"
+                      >content_copy</span
+                    >
+                  </button>
+                </div>
+                <div class="chat">
+                  <img
+                    src="./assets/images/user-img.png"
+                    class="ai-image"
+                    alt=""
+                  />
+                  <div class="chat-text-box">
+                    ("cosmetic" OR "beauty") AND ("scientist" OR "researcher" OR
+                    "formulator" OR "chemist" OR "expert")
+                  </div>
+                  <button
+                    class="copy"
+                    data-bs-toggle="tooltip"
+                    title="Copy response"
+                  >
+                    <span class="material-symbols material-symbols-rounded"
+                      >content_copy</span
+                    >
+                  </button>
+                  <div class="btn-group dropup">
+                    <button
+                      type="button"
+                      class="copy"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="material-symbols material-symbols-rounded"
+                        >download</span
+                      >
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <button class="dropdown-item">
+                          <span
+                            class="material-symbols material-symbols-rounded"
+                            >picture_as_pdf</span
+                          >
+                          Export PDF
+                        </button>
+                      </li>
+                      <div class="dropdown-divider"></div>
+                      <li>
+                        <button class="dropdown-item">
+                          <span
+                            class="material-symbols material-symbols-rounded"
+                            >article</span
+                          >
+                          Export Document
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-box">
+          <div class="container-fluid">
+            <form action="">
+              <div class="box">
+                <button
+                  type="button"
+                  data-bs-toggle="tooltip"
+                  title="Upload resume or job description"
+                  class="btn btn-primarylight icon-btn"
+                  onclick="document.getElementById('attach_file').click()"
+                >
+                  <span class="materials-symbols material-symbols-rounded"
+                    >upload</span
+                  >
+                  <input type="file" name="" id="attach_file" class="d-none" />
+                </button>
+                <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+                aria-controls="offcanvasBottom" data-bs-toggle="tooltip" title="Add more options"
+                class="btn btn-primarylight icon-btn">
+                <span class="materials-symbols material-symbols-rounded">docs_add_on</span>
+              </button> -->
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  placeholder="Prompt e.g. “Use the job description to generate questions for me”"
+                  class="flex-fill"
+                ></textarea>
+                <button class="btn btn-light icon-btn send-btn">
+                  <span class="material-symbols material-symbols-rounded"
+                    >send</span
+                  >
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="suggested-candidates">
+      <button class="btn-close" id="close-suggested-cd"></button>
+      <div class="top-1">
+        <div class="heading">
+          <h5>Suggested Candidates</h5>
+        </div>
+        <div class="candidates">
+          <a href="" class="candidate">
+            <img src="https://picsum.photos/200/300" alt="" />
+            <div class="data">
+              <p class="name">Travor Holmes</p>
+              <p class="designation">UX Designer</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="top-2">
+        <div class="heading">
+          <h5>Similar Candidates</h5>
+        </div>
+        <div class="candidates">
+          <a href="" class="candidate">
+            <img src="https://picsum.photos/200/300" alt="" />
+            <div class="data">
+              <p class="name">Travor Holmes</p>
+              <p class="designation">UX Designer</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="offcanvas offcanvas-bottom"
+      tabindex="-1"
+      id="offcanvasBottom"
+      aria-labelledby="offcanvasBottomLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasBottomLabel">
+          Add Multiple Options
+        </h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body small">
+        <div class="container-fluid">
+          <div class="row g-lg-6 g-4">
+            <div class="col-lg-4 col-md-6">
+              <label for="" class="form-label">Email Tone</label>
+              <div class="form-group mb-0">
+                <select name="" id="" class="form-select">
+                  <option value="">--Select--</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <label for="" class="form-label">Recipient Name</label>
+              <div class="form-group mb-0">
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <label for="" class="form-label">Recipient Company</label>
+              <div class="form-group mb-0">
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <label for="" class="form-label">Position Title</label>
+              <div class="form-group mb-0">
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <label for="" class="form-label">Location</label>
+              <div class="form-group mb-0">
+                <select name="" id="" class="form-select">
+                  <option value="">--Select--</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <label for="" class="form-label"
+                >LinkedIn Profile of Hiring Manager</label
+              >
+              <div class="form-group mb-0">
+                <input type="url" class="form-control" />
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <label for="" class="form-label">Date</label>
+              <div class="form-group mb-0">
+                <input type="date" class="form-control" />
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <label for="" class="form-label">Time</label>
+              <div class="form-group mb-0">
+                <input type="time" class="form-control" />
+              </div>
+            </div>
+            <div class="col-12 text-end">
+              <button class="btn btn-primary">Save Filters</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="offcanvas offcanvas-start chat-history-canvas"
+      tabindex="-1"
+      id="chatHistory"
+      aria-labelledby="chatHistoryLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="chatHistoryLabel">Chat History</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="chat-container">
+          <div class="chats">
+            <div class="chat me">
+              <div class="chat-text-box">
+                Create a boolean search for cosmetic scientist
+                <p class="date-time">June 25, 2023 08:33 PM</p>
+              </div>
+              <button class="copy" data-bs-toggle="tooltip" title="Copy query">
+                <span class="material-symbols material-symbols-rounded"
+                  >content_copy</span
+                >
+              </button>
+            </div>
+            <div class="chat">
+              <img src="./assets/images/user-img.png" class="ai-image" alt="" />
+              <div class="chat-text-box">
+                Here's Boolean search
+                <p class="date-time">June 25, 2023 08:33 PM</p>
+              </div>
+              <button
+                class="copy"
+                data-bs-toggle="tooltip"
+                title="Copy response"
+              >
+                <span class="material-symbols material-symbols-rounded"
+                  >content_copy</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./statc/js/all.js"></script>
+    <script src="./statc/js/calls.js"></script>
+    <script src="./statc/js/check.js"></script>
+  </body>
+</html>

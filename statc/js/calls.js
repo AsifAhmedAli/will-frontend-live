@@ -208,6 +208,15 @@ $("#loginform").submit(function (event) {
           text: "Incorrect Password",
           icon: "error",
         });
+      } else if (
+        response.responseJSON.error ==
+        "you are not registered, please register first"
+      ) {
+        Swal.fire({
+          title: "Not Registered!",
+          text: "You are not registered, please register first",
+          icon: "error",
+        });
       } else {
         Swal.fire({
           title: "Error!",
@@ -544,7 +553,7 @@ $("#verificationcodeform").submit(function (event) {
   }
 });
 
-// get_user
+// get_user_settings_page
 
 function getdataoftheuser() {
   var id = getCookie("id");
@@ -575,7 +584,59 @@ function getdataoftheuser() {
       error: function (response) {
         // console.log(response);
         document.getElementById("loader1").style.visibility = "hidden";
+        console.log(response);
+        if (response.responseJSON.message == "Unauthorized") {
+          Swal.fire({
+            icon: "error",
+            title: "Failed!",
+            text: "Please Login!",
+            // allowOutsideClick: false,
+          });
+          $("button.swal2-confirm").click(function () {
+            // alert("asdf");
+            window.location.replace("./login.html");
+          });
+        } else {
+          Swal.fire({
+            title: "Error!",
+            text: "An Unexpected Error Occured",
+            icon: "error",
+          });
+        }
+      },
+    });
+  }
+}
+
+//get_user_boolean_search_page
+function getdataoftheuser1() {
+  var id = getCookie("id");
+  // console.log(id);
+  if (id == "" || typeof id == "undefined" || id == null) {
+    Swal.fire({
+      icon: "error",
+      title: "Failed!",
+      text: "Please Login!",
+      // allowOutsideClick: false,
+    });
+    $("button.swal2-confirm").click(function () {
+      // alert("asdf");
+      window.location.replace("./login.html");
+    });
+  } else {
+    document.getElementById("loader1").style.visibility = "visible";
+    $.ajax({
+      type: "get",
+      url: `${baseurl}/get-user/${id}`,
+      success: function (response) {
         // console.log(response);
+        document.getElementById("loader1").style.visibility = "hidden";
+      },
+
+      error: function (response) {
+        // console.log(response);
+        document.getElementById("loader1").style.visibility = "hidden";
+        console.log(response);
         if (response.responseJSON.message == "Unauthorized") {
           Swal.fire({
             icon: "error",

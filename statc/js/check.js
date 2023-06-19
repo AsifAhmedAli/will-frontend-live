@@ -20,6 +20,9 @@ function getCookie(cname) {
 // var as = getCookie("user");
 // console.log(JSON.stringify(as));
 if (getCookie("token") !== "") {
+  document.getElementById("sevcisa1").classList.remove("d-none");
+  document.getElementById("abouta").classList.add("d-none");
+
   document.getElementById("logoutlist").classList.remove("d-none");
   document.getElementById("loginlist").classList.add("d-none");
   document.getElementById("profile_settings").classList.remove("d-none");
