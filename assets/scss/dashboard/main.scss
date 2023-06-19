@@ -93,11 +93,22 @@ main {
   &.collapsed {
     transform: translateX($suggested-candidate-width);
   }
-  > div {
-    height: 50%;
-    overflow-y: auto;
-    &:not(:last-child) {
-      border-bottom: 1px solid $shadow-color-dark;
+  &.single{
+    > div {
+      height: 100%;
+      overflow-y: auto;
+      &:not(:last-child) {
+        border-bottom: 1px solid $shadow-color-dark;
+      }
+    }
+  }
+  &.double{
+    > div {
+      height: 50%;
+      overflow-y: auto;
+      &:not(:last-child) {
+        border-bottom: 1px solid $shadow-color-dark;
+      }
     }
   }
   .heading {
@@ -171,6 +182,8 @@ main {
       max-width: 50px;
       max-height: 50px;
       border-radius: 50%;
+      object-fit: contain;
+      border: 1px solid rgba($color: $dark, $alpha: 0.2);
     }
     .chat-text-box {
       font-size: 14px;
