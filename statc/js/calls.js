@@ -630,6 +630,7 @@ function getdataoftheuser1() {
       url: `${baseurl}/get-user/${id}`,
       success: function (response) {
         // console.log(response);
+        getchathistory(0);
         document.getElementById("loader1").style.visibility = "hidden";
       },
 

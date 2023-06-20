@@ -173,7 +173,7 @@
             >
             Chat History
           </button>
-          <button class="btn btn-primary">
+          <button class="btn btn-primary" onclick="clearchat()">
             <span class="material-symbols material-symbols-rounded">add</span>
             New Chat
           </button>
@@ -191,87 +191,8 @@
         <div class="container-fluid">
           <div class="row">
             <div class="chat-container">
-              <div class="chats">
-                <div class="chat me">
-                  <div class="chat-text-box">
-                    <p class="chat-response">
-                      Create a boolean search for cosmetic scientist
-                    </p>
-                    <p class="date-time">June 25, 2023 08:33 PM</p>
-                  </div>
-                  <button
-                    class="copy"
-                    data-bs-toggle="tooltip"
-                    title="Copy query"
-                  >
-                    <span class="material-symbols material-symbols-rounded"
-                      >content_copy</span
-                    >
-                  </button>
-                </div>
-                <div class="chat">
-                  <img
-                    src="./assets/images/pure_talent_logo.svg"
-                    class="ai-image"
-                    alt=""
-                  />
-                  <div class="chat-text-box">
-                    <p class="chat-response">
-                      ("cosmetic" OR "beauty") AND ("scientist" OR "researcher"
-                      OR "formulator" OR "chemist" OR "expert")
-                    </p>
-                    <p class="date-time">June 25, 2023 08:33 PM</p>
-                  </div>
-                  <button
-                    class="copy"
-                    data-bs-toggle="tooltip"
-                    title="Copy response"
-                  >
-                    <span class="material-symbols material-symbols-rounded"
-                      >content_copy</span
-                    >
-                  </button>
-                </div>
-                <div class="chat me">
-                  <div class="chat-text-box">
-                    <p class="chat-response">
-                      Create a boolean search for cosmetic scientist
-                    </p>
-                    <p class="date-time">June 25, 2023 08:33 PM</p>
-                  </div>
-                  <button
-                    class="copy"
-                    data-bs-toggle="tooltip"
-                    title="Copy query"
-                  >
-                    <span class="material-symbols material-symbols-rounded"
-                      >content_copy</span
-                    >
-                  </button>
-                </div>
-                <div class="chat">
-                  <img
-                    src="./assets/images/pure_talent_logo.svg"
-                    class="ai-image"
-                    alt=""
-                  />
-                  <div class="chat-text-box">
-                    <p class="chat-response">
-                      ("cosmetic" OR "beauty") AND ("scientist" OR "researcher"
-                      OR "formulator" OR "chemist" OR "expert")
-                    </p>
-                    <p class="date-time">June 25, 2023 08:33 PM</p>
-                  </div>
-                  <button
-                    class="copy"
-                    data-bs-toggle="tooltip"
-                    title="Copy response"
-                  >
-                    <span class="material-symbols material-symbols-rounded"
-                      >content_copy</span
-                    >
-                  </button>
-                </div>
+              <div class="chats" id="chats_container">
+
               </div>
             </div>
           </div>
@@ -350,40 +271,14 @@
       </div>
       <div class="offcanvas-body">
         <div class="chat-container">
-          <div class="chats">
-            <div class="chat me">
-              <div class="chat-text-box">
-                Create a boolean search for cosmetic scientist
-                <p class="date-time">June 25, 2023 08:33 PM</p>
-              </div>
-              <button class="copy" data-bs-toggle="tooltip" title="Copy query">
-                <span class="material-symbols material-symbols-rounded"
-                  >content_copy</span
-                >
-              </button>
-            </div>
-            <div class="chat">
-              <img src="./assets/images/pure_talent_logo.svg" class="ai-image" alt="" />
-              <div class="chat-text-box">
-                Here's Boolean search
-                <p class="date-time">June 25, 2023 08:33 PM</p>
-              </div>
-              <button
-                class="copy"
-                data-bs-toggle="tooltip"
-                title="Copy response"
-              >
-                <span class="material-symbols material-symbols-rounded"
-                  >content_copy</span
-                >
-              </button>
-            </div>
+          <div class="chats" id="history_chats">
+
           </div>
         </div>
       </div>
     </div>
 
-    <div class="loading" id="loader1" style="visibility: hidden;">Loading&#8230;</div>
+    
         <script
       src="https://code.jquery.com/jquery-3.7.0.min.js"
       integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
@@ -396,4 +291,5 @@
     <script src="./statc/js/calls.js"></script>
     <script src="./statc//js/boolean_search.js"></script>
   </body>
+  <div class="loading" id="loader1" style="visibility: hidden;">Loading&#8230;</div>
 </html>
