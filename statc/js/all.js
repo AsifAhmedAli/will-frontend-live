@@ -1,1 +1,1 @@
-var baseurl = "http://localhost:8000";
+var baseurl = "https://api.puretalent.ai";
